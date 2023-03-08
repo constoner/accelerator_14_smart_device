@@ -36,8 +36,8 @@ $ff-title:                          "Roboto Condensed", "Arial Narrow", sans-ser
 // Animation
 // ---------------------------------
 
-$tf-default:                        ease;
-$trans-default:                     0.3s $tf-default;
+$tf-default:                        ease-out;
+$trans-default:                     0.2s $tf-default;
 
 // если требуется изинг отличный от $tf-default, то переменную называем не цифрой
 $trans-modal:                       0.6s cubic-bezier(0.55, 0, 0.1, 1);
