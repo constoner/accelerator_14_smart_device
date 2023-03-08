@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content="Smart Device - производство и монтаж печатных плат, поставка комплектующих, блоков и модулей">
     <title>Smart Device</title>
     <link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-icon-57x57.png">
@@ -29,11 +29,40 @@
     <link rel="preload" href="./fonts/RobotoCondensed-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   </head>
   <body>
+    <header class="header">
+      <div class="header__wrapper container">
+        <a class="header__logo focus-visible" href="./index.html">
+          <picture>
+            <source type="image/svg+xml" media="(max-width: 767px)" srcset="./img/svg/logo-small.svg" width="35" height="35">
+            <img
+              class="header__image"
+              src="./img/svg/logo-large.svg"
+              width="215"
+              height="55"
+              alt="Логотип Smart Device."
+            />
+          </picture>
+        </a>
+          <address class="header__address address">
+              <a class="address__link focus-visible" href="mailto:info@sd.ru">
+                <svg class="address__icon address__icon--mail" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false">
+                  <use href="./img/sprite.svg#icon-mail"/>
+                </svg>
+                <span class="address__txt">info@sd.ru</span>
+              </a>
+              <a class="address__link focus-visible" href="tel:+74950005252">
+                <svg class="address__icon address__icon--phone" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false">
+                  <use href="./img/sprite.svg#icon-phone"/>
+                </svg>
+                <span class="address__txt">+7 (495) 000 52 52</span>
+              </a>
+          </address>
+          <a class="header__btn btn focus-visible" href="#">Заказать звонок</a>
+      </div>
+    </header>
     <!-- заглушка -->
-    <div style="background-color: #041827;">
-      <button class="btn focus-visible" type="button">press me please!</button>
-      <button class="btn" type="button">one more button...</button>
-      <h2 class="title">Ya zagolovok</h2>
+    <div>
+      <h2 class="title">Lorem ipsum</h2>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus dignissimos fugiat, quia quidem non eius similique saepe modi reiciendis iste provident aperiam voluptatem velit sint repudiandae illum assumenda laboriosam! Aut.</p>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus dignissimos fugiat, quia quidem non eius similique saepe modi reiciendis iste provident aperiam voluptatem velit sint repudiandae illum assumenda laboriosam! Aut.</p>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus dignissimos fugiat, quia quidem non eius similique saepe modi reiciendis iste provident aperiam voluptatem velit sint repudiandae illum assumenda laboriosam! Aut.</p>

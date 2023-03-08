@@ -12,14 +12,16 @@
 @import "mixins";
 @import "global/fonts";
 @import "global/reboot";
-// @import "global/utils";
-// @import "global/container";
+@import "global/utils";
+@import "global/container";
 
 // Blocks
 // ---------------------------------
 
 @import "blocks/btn";
 @import "blocks/title";
+@import "blocks/header";
+@import "blocks/address";
 // @import "blocks/modal";
 // @import "blocks/custom-input";
 // @import "blocks/custom-toggle";
