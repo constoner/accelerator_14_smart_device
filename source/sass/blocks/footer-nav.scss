@@ -1,13 +1,19 @@
 .footer-nav__list {
   display: grid;
-  grid-auto-flow: column;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(4, min-content);
+  grid-auto-flow: column;
   gap: 10px 30px;
   margin: 0;
   padding: 0;
   list-style-type: none;
   line-height: 20px;
+
+  @include vp-1023 {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-auto-flow: row;
+  }
 }
 
 .footer-nav li {
