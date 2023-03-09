@@ -33,6 +33,6 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          token: ${{ secrets.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 }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           folder: ./build
           branch: gh-pages
