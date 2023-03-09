@@ -621,7 +621,7 @@ button,
 }
 
 .btn.focus-visible:focus:not(:active) {
-  outline: 3px solid #00B2FF;
+  outline: 3px solid #00b2ff;
 }
 
 .btn.focus-visible:active {
@@ -645,7 +645,7 @@ button,
   min-height: 120px;
   padding-top: 30px;
   padding-bottom: 35px;
-  color: #F2F5F6;
+  color: #f2f5f6;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(84.9%, #041827), to(rgba(4, 24, 39, 0)));
   background-image: -o-linear-gradient(top, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
   background-image: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
@@ -677,7 +677,7 @@ button,
 }
 
 .header__logo.focus-visible:focus:not(:active) {
-  outline: 2px solid #00B2FF;
+  outline: 2px solid #00b2ff;
 }
 
 .header__logo.focus-visible:active {
@@ -701,8 +701,8 @@ button,
   padding: 11px 15px;
   font-size: 14px;
   line-height: 16px;
-  color: #F2F5F6;
-  border: 1px solid #F2F5F6;
+  color: #f2f5f6;
+  border: 1px solid #f2f5f6;
 }
 
 .address {
@@ -729,7 +729,7 @@ button,
 }
 
 .address__link.focus-visible:focus:not(:active) {
-  outline: 2px solid #00B2FF;
+  outline: 2px solid #00b2ff;
 }
 
 .address__link.focus-visible:active {
@@ -739,7 +739,7 @@ button,
 .address__icon {
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  color: #00B2FF;
+  color: #00b2ff;
 }
 
 .address__txt {
