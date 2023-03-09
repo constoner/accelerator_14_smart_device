@@ -746,6 +746,14 @@ button,
   margin-left: 15px;
 }
 
+.footer {
+  height: 200px;
+  margin-top: auto;
+  padding: 20px;
+  color: #f2f5f6;
+  background-color: #041827;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
