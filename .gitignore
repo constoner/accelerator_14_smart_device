@@ -2,7 +2,7 @@
 .idea
 .vscode
 package.json
-# package-lock.json
+# package-lock.json для автодеплоя на gh-pages
 *.ai
 *.log
 *.psd

@@ -19,4 +19,4 @@
 - Создание webp изображений в директории source - `npm run webp`
 
 **Итоговый код  - см. директорию `build` в главной ветке** <br>
-*Проект автоматически деплоится на gh-pages при пуше в ветку main...*
+*Проект автоматически деплоится на [gh-pages](https://constoner.github.io/accelerator_14_smart_device/) при пуше в ветку main*
