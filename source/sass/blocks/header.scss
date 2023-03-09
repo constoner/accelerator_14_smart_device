@@ -24,7 +24,7 @@
   }
 }
 
-.header__wrapper {
+.header__container {
   display: grid;
   grid-template-columns: minmax(min-content, 355px) 480px 1fr 50px;
   gap: 10px;
@@ -38,25 +38,7 @@
 
 .header__logo {
   grid-column: 1/2;
-  transition: opacity $trans-default;
-
-  @include hover {
-    opacity: 0.6;
-  }
-
-  @include focus {
-    outline: 2px solid $color-deep-sky-blue;
-  }
-
-  @include active {
-    opacity: 0.2;
-  }
 }
-
-// .header__image {
-//   width: 100%;
-//   height: auto;
-// }
 
 .header__address {
   grid-column: 2/3;

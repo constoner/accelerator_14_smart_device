@@ -31,8 +31,8 @@
   <body>
     <div class="wrapper">
       <header class="header">
-        <div class="header__wrapper container">
-          <a class="header__logo focus-visible" href="./index.html">
+        <div class="header__container container">
+          <a class="header__logo logo focus-visible" href="./index.html">
             <picture>
               <source type="image/svg+xml" media="(max-width: 767px)" srcset="./img/svg/logo-small.svg" width="35" height="35">
               <img
@@ -44,18 +44,18 @@
               />
             </picture>
           </a>
-            <address class="header__address address">
-                <a class="address__link focus-visible" href="mailto:info@sd.ru">
-                  <svg class="address__icon address__icon--mail" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false">
+            <address class="header__contacts contacts">
+                <a class="contacts__link focus-visible" href="mailto:info@sd.ru">
+                  <svg class="contacts__icon contacts__icon--mail" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false">
                     <use href="./img/sprite.svg#icon-mail"/>
                   </svg>
-                  <span class="address__txt">info@sd.ru</span>
+                  <span class="contacts__txt">info@sd.ru</span>
                 </a>
-                <a class="address__link focus-visible" href="tel:+74950005252">
-                  <svg class="address__icon address__icon--phone" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false">
+                <a class="contacts__link focus-visible" href="tel:+74950005252">
+                  <svg class="contacts__icon contacts__icon--phone" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false">
                     <use href="./img/sprite.svg#icon-phone"/>
                   </svg>
-                  <span class="address__txt">+7 (495) 000 52 52</span>
+                  <span class="contacts__txt">+7 (495) 000 52 52</span>
                 </a>
             </address>
             <a class="header__btn btn focus-visible" href="#">Заказать звонок</a>
@@ -70,7 +70,81 @@
       </div>
 
       <footer class="footer">
-        <h2 class="title">Footer</h2>
+        <div class="footer__container container">
+          <div class="footer__logo-wrapper">
+            <a class="footer__logo logo focus-visible" href="./index.html">
+                <img
+                  class="header__image"
+                  src="./img/svg/logo-large.svg"
+                  width="215"
+                  height="55"
+                  alt="Логотип Smart Device."
+                />
+            </a>
+            <ul class="footer_social-list social-list">
+              <li class="social-list__item">
+                <a class="social-list__link focus-visible" href="#" aria-label="Мы в Одноклассниках.">
+                  <svg class="social-list__icon" width="30" height="30" fill="currentColor" aria-hidden="true" focusable="false">
+                    <use href="./img/sprite.svg#icon-social-ok" />
+                  </svg>
+                </a>
+              </li>
+              <li class="social-list__item">
+                <a class="social-list__link focus-visible" href="#" aria-label="Мы во Вконтакте.">
+                  <svg class="social-list__icon" width="30" height="30" fill="currentColor" aria-hidden="true" focusable="false">
+                    <use href="./img/sprite.svg#icon-social-vk" />
+                  </svg>
+                </a>
+              </li>
+              <li class="social-list__item">
+                <a class="social-list__link focus-visible" href="#" aria-label="Мы на Пинтерест.">
+                  <svg class="social-list__icon" width="30" height="30" fill="currentColor" aria-hidden="true" focusable="false">
+                    <use href="./img/sprite.svg#icon-social-pinterest" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <section class="footer__column">
+            <h2 class="footer__title title">Разделы сайта</h2>
+            <navigation class="footer__nav footer-nav">
+              <ul class="footer-nav__list">
+                <li class="footer-nav__item">
+                  <a class="footer-nav__link focus-visible" href="#">О Компании</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a class="footer-nav__link focus-visible" href="#">Продукты</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a class="footer-nav__link focus-visible" href="#">Производство печатных плат</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a class="footer-nav__link focus-visible" href="#">Монтаж печатных плат</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a class="footer-nav__link focus-visible" href="#">Комплектующие</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a class="footer-nav__link focus-visible" href="#">Доставка</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a class="footer-nav__link focus-visible" href="#">Контакты</a>
+                </li>
+              </ul>
+            </navigation>
+          </section>
+          <section class="footer__column">
+            <h2 class="footer__title title">Наш офис</h2>
+            <address class="footer__address footer__list">
+              <p>
+                г. Мытищи, Олимпийский проспект, д.10
+              </p>
+              <a class="footer__link focus-visible" href="tel:+74955894050">+7 (495) 589-40-50</a>
+              <a class="footer__link focus-visible" href="tel:+79253895829">+7 (925) 389-58-29</a>
+              <a class="footer__link focus-visible" href="tel:+79253647813">+7 (925) 364-78-13</a>
+            </address>
+          </section>
+        </div>
       </footer>
     </div>
     <!-- <script src="js/vendor.min.js"></script> -->

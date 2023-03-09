@@ -1,4 +1,4 @@
-.address {
+.contacts {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
   column-gap: 20px;
@@ -14,7 +14,7 @@
   }
 }
 
-.address__link {
+.contacts__link {
   display: flex;
   align-items: center;
   font-style: normal;
@@ -40,12 +40,12 @@
   }
 }
 
-.address__icon {
+.contacts__icon {
   flex-shrink: 0;
   color: $color-deep-sky-blue;
 }
 
-.address__txt {
+.contacts__txt {
   margin-left: 15px;
 
   @include vp-1023 {
