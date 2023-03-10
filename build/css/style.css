@@ -384,26 +384,6 @@ template {
   display: none;
 }
 
-[data-accordion=element].is-active > [data-accordion=content] {
-  max-height: 100%;
-  will-change: max-height;
-}
-
-[data-accordion=parent].no-transition [data-accordion=content] {
-  -webkit-transition: none;
-  -o-transition: none;
-  transition: none;
-}
-
-[data-accordion=content] {
-  max-height: 0;
-  will-change: max-height;
-  -webkit-transition: max-height 0.2s ease-out;
-  -o-transition: max-height 0.2s ease-out;
-  transition: max-height 0.2s ease-out;
-  overflow: hidden;
-}
-
 @font-face {
   font-style: normal;
   font-weight: 400;
@@ -1111,6 +1091,26 @@ button,
 }
 
 @media (max-width: 767px) {
+  [data-accordion=element].is-active > [data-accordion=content] {
+    max-height: 100%;
+    will-change: max-height;
+  }
+
+  [data-accordion=parent].no-transition [data-accordion=content] {
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
+  }
+
+  [data-accordion=content] {
+    max-height: 0;
+    will-change: max-height;
+    -webkit-transition: max-height 0.2s ease-out;
+    -o-transition: max-height 0.2s ease-out;
+    transition: max-height 0.2s ease-out;
+    overflow: hidden;
+  }
+
   .container {
     padding: 0 25px;
     overflow: hidden;
