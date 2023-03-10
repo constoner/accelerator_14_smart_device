@@ -10,6 +10,11 @@
   @include vp-1023 {
     padding-bottom: 65px;
   }
+
+  @include vp-767 {
+    padding-top: 32px;
+    padding-bottom: 35px;
+  }
 }
 
 .footer__container {
@@ -21,6 +26,11 @@
     grid-template-columns: 1fr 47.76%;
     gap: 35px 110px;
   }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
 }
 
 .footer__logo-wrapper {
@@ -31,6 +41,11 @@
     flex-direction: row;
     justify-content: space-between;
     grid-column: 1/-1;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -51,12 +66,30 @@
   @include vp-1023 {
     margin-top: 5px;
   }
+
+  @include vp-767 {
+    margin-top: 15px;
+  }
 }
 
 .footer__column {
   display: flex;
   flex-direction: column;
   align-self: stretch;
+
+  @include vp-767 {
+    margin-left: -100px;
+    margin-right: -100px;
+    padding: 5px 100px;
+    border: 1px solid $color-white-trasparent;
+  }
+}
+
+.footer__column + .footer__column {
+  @include vp-767 {
+    margin-top: -1px;
+    border-top: none;
+  }
 }
 
 .footer__title {
@@ -71,30 +104,69 @@
   @include vp-1023 {
     margin-top: 0;
   }
+
+  @include vp-767 {
+    margin-bottom: 0;
+    padding: 15px 0;
+  }
 }
 
-.footer__nav {
-  flex-grow: 1;
+.footer__title {
+  position: relative;
+
+  @include vp-767 {
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 22px;
+      right: 0;
+      width: 15px;
+      height: 1px;
+      background-color: $color-white-trasparent;
+      content: ""
+    }
+
+    &::after {
+      display: block;
+      transform: rotate(90deg);
+      transition: opacity $trans-default;
+    }
+  }
 }
 
-.footer__list {
-  height: 100%;
+.is-active .footer__title {
+
+  @include vp-767 {
+
+    &::after {
+      opacity: 0;
+    }
+  }
 }
 
-.footer__list * + * {
-  margin-top: 10px;
+.footer-list__item {
+  @include vp-767 {
+    margin-top: 10px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 15px;
+    }
+  }
 }
 
-.footer__address {
+.footer__address .footer-list__item:first-child {
+  margin-bottom: 15px;
   font-style: normal;
-}
-
-.footer__address p {
-  margin: 0;
 }
 
 .footer__link {
   display: block;
+  font-style: normal;
   color: inherit;
   transition: opacity $trans-default;
 

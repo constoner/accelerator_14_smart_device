@@ -384,6 +384,26 @@ template {
   display: none;
 }
 
+[data-accordion=element].is-active > [data-accordion=content] {
+  max-height: 100%;
+  will-change: max-height;
+}
+
+[data-accordion=parent].no-transition [data-accordion=content] {
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+
+[data-accordion=content] {
+  max-height: 0;
+  will-change: max-height;
+  -webkit-transition: max-height 0.2s ease-out;
+  -o-transition: max-height 0.2s ease-out;
+  transition: max-height 0.2s ease-out;
+  overflow: hidden;
+}
+
 @font-face {
   font-style: normal;
   font-weight: 400;
@@ -815,30 +835,18 @@ button,
   text-transform: uppercase;
 }
 
-.footer__nav {
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
+.footer__title {
+  position: relative;
 }
 
-.footer__list {
-  height: 100%;
-}
-
-.footer__list * + * {
-  margin-top: 10px;
-}
-
-.footer__address {
+.footer__address .footer-list__item:first-child {
+  margin-bottom: 15px;
   font-style: normal;
-}
-
-.footer__address p {
-  margin: 0;
 }
 
 .footer__link {
   display: block;
+  font-style: normal;
   color: inherit;
   -webkit-transition: opacity 0.2s ease-out;
   -o-transition: opacity 0.2s ease-out;
@@ -911,7 +919,7 @@ button,
   pointer-events: none;
 }
 
-.footer-nav__list {
+.footer-menu {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -921,20 +929,20 @@ button,
   grid-template-rows: repeat(4, -webkit-min-content);
   grid-template-rows: repeat(4, min-content);
   grid-auto-flow: column;
-  gap: 10px 30px;
+  gap: 0 30px;
   margin: 0;
   padding: 0;
   list-style-type: none;
   line-height: 20px;
 }
 
-.footer-nav li {
+.footer-menu__item {
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
 }
 
-.footer-nav__link {
+.footer-menu__link {
   display: block;
   color: inherit;
   -webkit-transition: opacity 0.2s ease-out;
@@ -942,16 +950,16 @@ button,
   transition: opacity 0.2s ease-out;
 }
 
-.footer-nav__link.focus-visible:focus:not(:active) {
+.footer-menu__link.focus-visible:focus:not(:active) {
   outline: 3px solid #00b2ff;
 }
 
-.footer-nav__link.focus-visible:active {
+.footer-menu__link.focus-visible:active {
   opacity: 0.2;
 }
 
-.footer-nav__link:disabled,
-.footer-nav__link.disabled {
+.footer-menu__link:disabled,
+.footer-menu__link.disabled {
   opacity: 0.6;
   pointer-events: none;
 }
@@ -1076,7 +1084,7 @@ button,
     margin-top: 0;
   }
 
-  .footer-nav__list {
+  .footer-menu {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     -ms-grid-rows: auto;
@@ -1087,7 +1095,8 @@ button,
 
 @media (max-width: 767px) {
   .container {
-    padding: 0 26px;
+    padding: 0 25px;
+    overflow: hidden;
   }
 
   .header {
@@ -1098,6 +1107,85 @@ button,
 
   .contacts {
     margin-right: 9px;
+  }
+
+  .footer {
+    padding-top: 32px;
+    padding-bottom: 35px;
+  }
+
+  .footer__container {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .footer__logo-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .footer__social-list {
+    margin-top: 15px;
+  }
+
+  .footer__column {
+    margin-left: -100px;
+    margin-right: -100px;
+    padding: 5px 100px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+  }
+
+  .footer__column + .footer__column {
+    margin-top: -1px;
+    border-top: none;
+  }
+
+  .footer__title {
+    margin-bottom: 0;
+    padding: 15px 0;
+  }
+
+  .footer__title::before,
+  .footer__title::after {
+    position: absolute;
+    top: 22px;
+    right: 0;
+    width: 15px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.7);
+    content: "";
+  }
+
+  .footer__title::after {
+    display: block;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    -webkit-transition: opacity 0.2s ease-out;
+    -o-transition: opacity 0.2s ease-out;
+    transition: opacity 0.2s ease-out;
+  }
+
+  .is-active .footer__title::after {
+    opacity: 0;
+  }
+
+  .footer-list__item {
+    margin-top: 10px;
+  }
+
+  .footer-list__item:first-child {
+    margin-top: 0;
+  }
+
+  .footer-list__item:last-child {
+    margin-bottom: 15px;
   }
 }
 
@@ -1122,7 +1210,7 @@ button,
     opacity: 0.6;
   }
 
-  .footer-nav__link:hover {
+  .footer-menu__link:hover {
     opacity: 0.6;
   }
 }
