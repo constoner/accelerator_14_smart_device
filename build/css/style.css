@@ -657,11 +657,9 @@ button,
 .header__container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: minmax(-webkit-min-content, 355px) 480px 1fr 50px;
-  -ms-grid-columns: minmax(min-content, 355px) 480px 1fr 50px;
-  grid-template-columns: minmax(-webkit-min-content, 355px) 480px 1fr 50px;
-  grid-template-columns: minmax(min-content, 355px) 480px 1fr 50px;
-  gap: 10px;
+  -ms-grid-columns: minmax(1fr, 375px) minmax(1fr, 625px) minmax(175px, 238px);
+  grid-template-columns: minmax(1fr, 375px) minmax(1fr, 625px) minmax(175px, 238px);
+  gap: 10px 0;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -673,20 +671,26 @@ button,
   grid-column: 1/2;
 }
 
-.header__address {
+.header__image {
+  margin-right: 15px;
+}
+
+.header__contacts {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
+  max-width: 480px;
 }
 
 .header__btn {
   -ms-grid-column: 3;
   -ms-grid-column-span: 1;
   grid-column: 3/4;
-  -ms-grid-column-align: end;
-  justify-self: end;
+  -ms-grid-column-align: start;
+  justify-self: start;
   min-width: 160px;
   min-height: 40px;
+  margin-left: 15px;
   padding: 11px 15px;
   font-size: 14px;
   line-height: 16px;
@@ -715,10 +719,9 @@ button,
 .contacts {
   display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-  -webkit-column-gap: 20px;
-  -moz-column-gap: 20px;
-  column-gap: 20px;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px 10px;
 }
 
 .contacts__link {
@@ -1013,6 +1016,9 @@ button,
     flex-grow: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
+    width: 215px;
+    height: auto;
+    margin-right: 0;
   }
 
   .header__btn {
@@ -1126,6 +1132,10 @@ button,
     padding-bottom: 20px;
   }
 
+  .header__logo {
+    width: 35px;
+  }
+
   .contacts {
     margin-right: 9px;
   }
@@ -1197,17 +1207,21 @@ button,
   }
 
   .footer__title::after {
-    display: block;
-    -webkit-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
-    -webkit-transition: opacity 0.2s ease-out;
-    -o-transition: opacity 0.2s ease-out;
-    transition: opacity 0.2s ease-out;
+    -webkit-transform: scaleY(1) rotate(90deg);
+    -ms-transform: scaleY(1) rotate(90deg);
+    transform: scaleY(1) rotate(90deg);
+    will-change: transform;
+    -webkit-transition: -webkit-transform 0.2s ease-out;
+    transition: -webkit-transform 0.2s ease-out;
+    -o-transition: transform 0.2s ease-out;
+    transition: transform 0.2s ease-out;
+    transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
   }
 
   .is-active .footer__title::after {
-    opacity: 0;
+    -webkit-transform: scaleY(0) rotate(90deg);
+    -ms-transform: scaleY(0) rotate(90deg);
+    transform: scaleY(0) rotate(90deg);
   }
 
   .footer-list {

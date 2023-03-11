@@ -1,7 +1,7 @@
 .contacts {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-  column-gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px 10px;
 
   @include vp-1023 {
     display: flex;

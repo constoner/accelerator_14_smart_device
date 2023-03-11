@@ -145,9 +145,9 @@
     }
 
     &::after {
-      display: block;
-      transform: rotate(90deg);
-      transition: opacity $trans-default;
+      transform: scaleY(1) rotate(90deg);
+      will-change: transform;
+      transition: transform $trans-default;
     }
   }
 }
@@ -155,7 +155,7 @@
 .is-active .footer__title {
   @include vp-767 {
     &::after {
-      opacity: 0;
+      transform: scaleY(0) rotate(90deg);
     }
   }
 }
