@@ -25,7 +25,7 @@
   }
 
   @include focus {
-    outline: 3px solid $color-deep-sky-blue;
+    outline: 3px dashed rgba($color-deep-sky-blue, 0.6);
   }
 
   @include active {
