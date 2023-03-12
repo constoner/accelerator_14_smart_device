@@ -1316,6 +1316,10 @@ button,
     margin-bottom: 10px;
   }
 
+  .main {
+    padding-bottom: 80px;
+  }
+
   .hero {
     min-height: 640px;
     margin-top: -100px;
@@ -1335,6 +1339,24 @@ button,
 
   .hero__btn {
     margin-left: 45px;
+  }
+
+  .features {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .features__item {
+    min-height: 360px;
+    padding-bottom: 35px;
+  }
+
+  .features__title {
+    line-height: 25px;
+  }
+
+  .features__txt {
+    line-height: 20px;
   }
 }
 
@@ -1517,6 +1539,37 @@ button,
 
   .hero br {
     display: none;
+  }
+
+  .features {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .features__list {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .features__item {
+    min-height: 325px;
+    padding: 30px;
+    padding-bottom: 35px;
+  }
+
+  .features__icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .features__title {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .features__txt {
+    font-size: 14px;
+    line-height: 19px;
   }
 }
 

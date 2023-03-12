@@ -2,6 +2,16 @@
   padding-top: 120px;
   padding-bottom: 120px;
   background-color: $color-alice-blue-bg;
+
+  @include vp-1023 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  @include vp-767 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 }
 
 .features__list {
@@ -11,6 +21,10 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+  }
 }
 
 .features__item {
@@ -21,6 +35,16 @@
   border-left: 5px solid $color-deep-sky-blue;
   transition: background-color $trans-default, border-color $trans-default;
 
+  @include vp-1023 {
+    min-height: 360px;
+    padding-bottom: 35px;
+  }
+
+  @include vp-767 {
+    min-height: 325px;
+    padding: 30px;
+    padding-bottom: 35px;
+  }
 }
 
 .features__icon {
@@ -30,6 +54,10 @@
   color: $color-deep-sky-blue;
   transition: color $trans-default;
 
+  @include vp-767 {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 .features__title {
@@ -40,6 +68,14 @@
   color: $color-deep-sky-blue;
   transition: color $trans-default;
 
+  @include vp-1023 {
+    line-height: 25px;
+  }
+
+  @include vp-767 {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .features__txt {
@@ -48,6 +84,15 @@
   line-height: 22px;
   color: $color-black-pearl;
   transition: color $trans-default;
+
+  @include vp-1023 {
+    line-height: 20px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 19px;
+  }
 }
 
 .features__item:hover {

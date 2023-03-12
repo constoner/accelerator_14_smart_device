@@ -1,4 +1,8 @@
 .main {
   padding-bottom: 100px;
   background-color: $color-alice-blue-bg;
+
+  @include vp-1023 {
+    padding-bottom: 80px;
+  }
 }
