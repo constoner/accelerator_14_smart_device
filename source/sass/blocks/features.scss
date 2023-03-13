@@ -96,12 +96,15 @@
 }
 
 .features__item:hover {
-  background-color: $color-deep-sky-blue;
-  border-color: $color-deep-sky-blue;
+  @media (min-width: 768px) {
 
-  & .features__icon,
-  & .features__title,
-  & .features__txt {
-    color: $color-alice-blue-txt;
+    background-color: $color-deep-sky-blue;
+    border-color: $color-deep-sky-blue;
+
+    & .features__icon,
+    & .features__title,
+    & .features__txt {
+      color: $color-alice-blue-txt;
+    }
   }
 }
