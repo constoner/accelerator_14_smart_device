@@ -1,0 +1,122 @@
+.feedback {
+  padding-top: 170px;
+  padding-bottom: 250px;
+  color: $color-default-white;
+  background-color: $color-deep-sky-blue;
+  background-image: linear-gradient(138deg, $color-black-pearl-transparent 32.6%, rgba(255, 255, 255, 0) 32.65%);
+
+}
+
+.feedback__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+}
+
+.feedback__background-wrapper {
+  padding-top: 27px;
+  padding-bottom: 10px;
+  align-self: center;
+}
+
+.feedback__background {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.feedback__wrapper {
+  max-width: 580px;
+  margin-right: 10px;
+}
+
+.feedback__title {
+  margin: 0;
+  margin-bottom: 15px;
+  font-size: 36px;
+  line-height: 45px;
+}
+
+.feedback__txt {
+  margin: 0;
+  margin-bottom: 35px;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.feedback__form-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 30px;
+}
+
+.feedback input,
+.feedback textarea {
+  padding: 15px;
+  font-size: 16px;
+  line-height: 20px;
+  color: $color-default-white;
+  background-color: $color-black-pearl-transparent-add;
+  border: 2px solid transparent;
+  border-radius: 3px;
+  transition: border-color $trans-default;
+
+  &:hover {
+    border-color: $color-black-pearl-transparent;
+  }
+}
+
+.feedback input {
+  height: 50px;
+}
+
+.feedback textarea {
+  grid-column: 1/-1;
+  height: 155px;
+  padding-top: 25px;
+}
+
+.feedback *::placeholder {
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba($color-default-white, $alpha: 0.6);
+}
+
+.feedback__btn-wrapper {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  margin-top: 35px;
+}
+
+.feedback__btn {
+  min-width: 265px;
+  min-height: 45px;
+  margin-bottom: 10px;
+  margin-right: 50px;
+  padding: 15px 25px;
+  justify-content: center;
+  align-items: center;
+  justify-self: start;
+  font-size: 16px;
+  line-height: 15px;
+  color: inherit;
+  background-color: $color-black-pearl;
+
+  @include focus {
+    outline: 3px dashed rgba($color-black-pearl, 0.6);
+  }
+}
+
+label:last-of-type {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  height: 45px;
+  order: 2;
+  font-size: 14px;
+  line-height: 15px;
+}

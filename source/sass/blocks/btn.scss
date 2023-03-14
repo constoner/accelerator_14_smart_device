@@ -36,8 +36,8 @@
 
 .btn--add {
   position: relative;
-  // transition: opacity $trans-default;
-  &::after {
+
+  &::before {
     position: absolute;
     z-index: -1;
     top: 10px;
@@ -54,7 +54,7 @@
   @include hover {
     opacity: 1;
 
-    &::after {
+    &::before {
       opacity: 1;
     }
   }
@@ -66,7 +66,7 @@
   @include active {
     opacity: 1;
 
-    &::after {
+    &::before {
       opacity: 0.2;
     }
   }
