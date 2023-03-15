@@ -28,11 +28,11 @@
   }
 
   @include focus {
-    outline: 3px dashed rgba($color-black-pearl, 0.6);
+    outline: 3px dashed $color-white-trasparent;
   }
 
-  &:focus:not(:placeholder-shown) {
-    background-color: transparent;
+  &:hover:focus {
+    outline: none;
   }
 
   &:disabled {
@@ -45,8 +45,8 @@
   height: 50px;
 }
 
-.feedback-form input[type="number"]::-webkit-outer-spin-button,
-.feedback-form input[type="number"]::-webkit-inner-spin-button {
+.feedback-form input[type="number"]::-webkit-outer-spin-btn,
+.feedback-form input[type="number"]::-webkit-inner-spin-btn {
   appearance: none;
   margin: 0;
 }
@@ -67,7 +67,7 @@
   color: rgba($color-default-white, $alpha: 0.6);
 }
 
-.feedback-form__button-wrapper {
+.feedback-form__btn-wrapper {
   display: flex;
   flex-wrap: wrap;
   align-items: end;
@@ -106,23 +106,26 @@
   }
 }
 
-.feedback-form__button-wrapper > label {
+.feedback-form__btn-wrapper .feedback-form__validation {
+  order: 1;
+}
+
+.feedback-form__btn-wrapper label {
   display: flex;
   align-items: center;
-  order: 1;
   font-size: 14px;
   line-height: 15px;
   cursor: pointer;
 }
 
-.feedback-form__button-wrapper label span {
+.feedback-form__btn-wrapper span {
   opacity: 1;
   transition: opacity $trans-default;
 }
 
 // состояния чекбокса
 
-.feedback-form__button-wrapper input[type="checkbox"] + span {
+.feedback-form__btn-wrapper input[type="checkbox"] + span {
   position: relative;
   display: block;
   width: 15px;
@@ -146,18 +149,40 @@
   }
 }
 
-.feedback-form__button-wrapper input[type="checkbox"]:checked + span {
+.feedback-form__btn-wrapper input[type="checkbox"]:checked + span {
 
   &::before {
     opacity: 1;
   }
 }
 
-.feedback-form__button-wrapper label:hover span {
+.feedback-form__btn-wrapper label:hover span {
   opacity: 0.6;
 }
 
 
-.feedback-form__button-wrapper input[type="checkbox"]:focus ~ span {
-  outline: 3px dashed $color-white-trasparent;
+.feedback-form__btn-wrapper input[type="checkbox"] {
+  @include focus {
+    & ~ span {
+      outline: 3px dashed $color-white-trasparent;
+    }
+  }
 }
+
+// стили для валидации
+.feedback-form {
+  --color-error: #ff4d00;
+
+  & .is-invalid > input {
+    border-color: var(--color-error);
+  }
+
+  & .is-valid > input {
+    border-color: #b3ff00;
+  }
+
+  & .is-invalid input[type="checkbox"] + span {
+    background-color: var(--color-error);
+  }
+}
+

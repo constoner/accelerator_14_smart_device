@@ -621,7 +621,7 @@ button,
   transition: opacity 0.2s ease-out;
 }
 
-.btn.focus-visible:focus:not(:active) {
+.btn.focus-visible:focus {
   outline: 3px dashed rgba(0, 178, 255, 0.6);
 }
 
@@ -655,7 +655,7 @@ button,
   content: "";
 }
 
-.btn--add.focus-visible:focus:not(:active) {
+.btn--add.focus-visible:focus {
   outline: 3px dashed rgba(0, 178, 255, 0.6);
 }
 
@@ -748,7 +748,7 @@ button,
   transition: opacity 0.2s ease-out;
 }
 
-.logo.focus-visible:focus:not(:active) {
+.logo.focus-visible:focus {
   outline: 3px dashed rgba(0, 178, 255, 0.6);
 }
 
@@ -778,7 +778,7 @@ button,
   transition: opacity 0.2s ease-out;
 }
 
-.contacts__link.focus-visible:focus:not(:active) {
+.contacts__link.focus-visible:focus {
   outline: 3px dashed rgba(0, 178, 255, 0.6);
 }
 
@@ -912,7 +912,7 @@ button,
   transition: opacity 0.2s ease-out;
 }
 
-.social-list__link.focus-visible:focus:not(:active) {
+.social-list__link.focus-visible:focus {
   outline: 3px dashed rgba(0, 178, 255, 0.6);
 }
 
@@ -975,7 +975,7 @@ button,
   transition: opacity 0.2s ease-out;
 }
 
-.footer-list__link.focus-visible:focus:not(:active) {
+.footer-list__link.focus-visible:focus {
   outline: 3px dashed rgba(0, 178, 255, 0.6);
 }
 
@@ -1253,7 +1253,7 @@ button,
   border: 1px solid #00b2ff;
 }
 
-.about__btn.focus-visible:focus:not(:active) {
+.about__btn.focus-visible:focus {
   outline: 3px dashed rgba(0, 178, 255, 0.6);
 }
 
@@ -1348,7 +1348,7 @@ button,
   content: "";
 }
 
-.services__link.focus-visible:focus:not(:active) {
+.services__link.focus-visible:focus {
   outline: 3px dashed rgba(0, 178, 255, 0.6);
 }
 
@@ -1470,24 +1470,14 @@ button,
   border-color: #ffffff;
 }
 
-.feedback-form input.focus-visible:focus:not(:active),
-.feedback-form textarea.focus-visible:focus:not(:active) {
-  outline: 3px dashed rgba(4, 24, 39, 0.6);
+.feedback-form input.focus-visible:focus,
+.feedback-form textarea.focus-visible:focus {
+  outline: 3px dashed rgba(255, 255, 255, 0.7);
 }
 
-.feedback-form input:focus:not(:-moz-placeholder-shown),
-.feedback-form textarea:focus:not(:-moz-placeholder-shown) {
-  background-color: transparent;
-}
-
-.feedback-form input:focus:not(:-ms-input-placeholder),
-.feedback-form textarea:focus:not(:-ms-input-placeholder) {
-  background-color: transparent;
-}
-
-.feedback-form input:focus:not(:placeholder-shown),
-.feedback-form textarea:focus:not(:placeholder-shown) {
-  background-color: transparent;
+.feedback-form input:hover:focus,
+.feedback-form textarea:hover:focus {
+  outline: none;
 }
 
 .feedback-form input:disabled,
@@ -1500,8 +1490,8 @@ button,
   height: 50px;
 }
 
-.feedback-form input[type=number]::-webkit-outer-spin-button,
-.feedback-form input[type=number]::-webkit-inner-spin-button {
+.feedback-form input[type=number]::-webkit-outer-spin-btn,
+.feedback-form input[type=number]::-webkit-inner-spin-btn {
   -webkit-appearance: none;
   appearance: none;
   margin: 0;
@@ -1543,7 +1533,7 @@ button,
   color: rgba(255, 255, 255, 0.6);
 }
 
-.feedback-form__button-wrapper {
+.feedback-form__btn-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1573,33 +1563,36 @@ button,
   background-color: #041827;
 }
 
-.feedback-form__btn.focus-visible:focus:not(:active) {
+.feedback-form__btn.focus-visible:focus {
   outline: 3px dashed rgba(255, 255, 255, 0.7);
 }
 
-.feedback-form__button-wrapper > label {
+.feedback-form__btn-wrapper .feedback-form__validation {
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
+}
+
+.feedback-form__btn-wrapper label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-ordinal-group: 2;
-  -ms-flex-order: 1;
-  order: 1;
   font-size: 14px;
   line-height: 15px;
   cursor: pointer;
 }
 
-.feedback-form__button-wrapper label span {
+.feedback-form__btn-wrapper span {
   opacity: 1;
   -webkit-transition: opacity 0.2s ease-out;
   -o-transition: opacity 0.2s ease-out;
   transition: opacity 0.2s ease-out;
 }
 
-.feedback-form__button-wrapper input[type=checkbox] + span {
+.feedback-form__btn-wrapper input[type=checkbox] + span {
   position: relative;
   display: block;
   width: 15px;
@@ -1610,7 +1603,7 @@ button,
   content: "";
 }
 
-.feedback-form__button-wrapper input[type=checkbox] + span::before {
+.feedback-form__btn-wrapper input[type=checkbox] + span::before {
   position: absolute;
   top: 3px;
   left: 2px;
@@ -1626,16 +1619,32 @@ button,
   transition: opacity 0.2s ease-out;
 }
 
-.feedback-form__button-wrapper input[type=checkbox]:checked + span::before {
+.feedback-form__btn-wrapper input[type=checkbox]:checked + span::before {
   opacity: 1;
 }
 
-.feedback-form__button-wrapper label:hover span {
+.feedback-form__btn-wrapper label:hover span {
   opacity: 0.6;
 }
 
-.feedback-form__button-wrapper input[type=checkbox]:focus ~ span {
+.feedback-form__btn-wrapper input[type=checkbox].focus-visible:focus ~ span {
   outline: 3px dashed rgba(255, 255, 255, 0.7);
+}
+
+.feedback-form {
+  --color-error: #ff4d00;
+}
+
+.feedback-form .is-invalid > input {
+  border-color: var(--color-error);
+}
+
+.feedback-form .is-valid > input {
+  border-color: #b3ff00;
+}
+
+.feedback-form .is-invalid input[type=checkbox] + span {
+  background-color: var(--color-error);
 }
 
 /* @mixin hover-focus {
@@ -2227,7 +2236,7 @@ button,
     height: 180px;
   }
 
-  .feedback-form__button-wrapper {
+  .feedback-form__btn-wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -2245,35 +2254,35 @@ button,
 }
 
 @media (hover: hover) {
-  .btn:hover {
+  .btn:hover:not(.focus-visible) {
     opacity: 0.6;
   }
 
-  .btn--add:hover {
+  .btn--add:hover:not(.focus-visible) {
     opacity: 1;
   }
 
-  .btn--add:hover::before {
+  .btn--add:hover:not(.focus-visible)::before {
     opacity: 1;
   }
 
-  .logo:hover {
+  .logo:hover:not(.focus-visible) {
     opacity: 0.6;
   }
 
-  .contacts__link:hover {
+  .contacts__link:hover:not(.focus-visible) {
     opacity: 0.6;
   }
 
-  .social-list__link:hover {
+  .social-list__link:hover:not(.focus-visible) {
     opacity: 0.6;
   }
 
-  .footer-list__link:hover {
+  .footer-list__link:hover:not(.focus-visible) {
     opacity: 0.6;
   }
 
-  .about__btn:hover {
+  .about__btn:hover:not(.focus-visible) {
     opacity: 0.6;
   }
 }

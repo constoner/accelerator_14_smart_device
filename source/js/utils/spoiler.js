@@ -1,5 +1,5 @@
 function initSpoiler() {
-  const spoilerButton = document.querySelector('.spoiler-button');
+  const spoilerButton = document.querySelector('.spoiler-btn');
   const spoilerontainer = document.querySelector('.spoiler-container');
 
   const toggleSpoiler = () => {
