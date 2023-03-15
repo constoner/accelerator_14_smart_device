@@ -3,10 +3,13 @@
   padding-bottom: 140px;
   color: $color-default-white;
   background-color: $color-black-pearl;
+  scroll-margin-top: 100px;
 
   @include vp-1023 {
     padding-top: 60px;
     padding-bottom: 75px;
+    scroll-margin-top: unset;
+
   }
 
   @include vp-767 {

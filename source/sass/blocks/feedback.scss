@@ -1,23 +1,52 @@
 .feedback {
+  position: relative;
+  z-index: 1;
   padding-top: 170px;
   padding-bottom: 250px;
   color: $color-default-white;
   background-color: $color-deep-sky-blue;
-  background-image: linear-gradient(138deg, $color-black-pearl-transparent 32.6%, rgba(255, 255, 255, 0) 32.65%);
+  scroll-margin-top: 120px;
 
+  &::before {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 50.63%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,0 100,0 0,100' fill='rgba(4, 24, 39, 0.5)'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    content: "";
+
+    @include vp-1023 {
+      display: none;
+    }
+  }
+
+  @include vp-1023 {
+    padding-top: 50px;
+    padding-bottom: 125px;
+    scroll-margin-top: unset;
+  }
+
+  @include vp-767 {
+    padding-bottom: 90px;
+  }
 }
 
 .feedback__container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .feedback__background-wrapper {
-  padding-top: 27px;
-  padding-bottom: 10px;
-  align-self: center;
+  padding-top: 76px;
+  padding-right: 35px;
+
+  @include vp-1023 {
+    display: none;
+  }
 }
 
 .feedback__background {
@@ -27,96 +56,48 @@
 }
 
 .feedback__wrapper {
-  max-width: 580px;
-  margin-right: 10px;
+  width: 590px;
+  flex-shrink: 0;
+  padding-right: 10px;
+
+  @include vp-1023 {
+    width: 100%;
+    padding-right: 0;
+  }
 }
 
-.feedback__title {
+.feedback h2 {
   margin: 0;
   margin-bottom: 15px;
+  font-family: $ff-title;
+  font-weight: 400;
   font-size: 36px;
   line-height: 45px;
+
+  @include vp-1023 {
+    margin-bottom: 10px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 20px;
+    font-size: 30px;
+    line-height: 35px;
+  }
 }
 
-.feedback__txt {
+.feedback p {
   margin: 0;
   margin-bottom: 35px;
   font-size: 16px;
   line-height: 20px;
-}
 
-.feedback__form-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px 30px;
-}
-
-.feedback input,
-.feedback textarea {
-  padding: 15px;
-  font-size: 16px;
-  line-height: 20px;
-  color: $color-default-white;
-  background-color: $color-black-pearl-transparent-add;
-  border: 2px solid transparent;
-  border-radius: 3px;
-  transition: border-color $trans-default;
-
-  &:hover {
-    border-color: $color-black-pearl-transparent;
+  @include vp-1023 {
+    margin-bottom: 25px;
   }
-}
 
-.feedback input {
-  height: 50px;
-}
-
-.feedback textarea {
-  grid-column: 1/-1;
-  height: 155px;
-  padding-top: 25px;
-}
-
-.feedback *::placeholder {
-  font-size: 16px;
-  line-height: 20px;
-  color: rgba($color-default-white, $alpha: 0.6);
-}
-
-.feedback__btn-wrapper {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: end;
-  margin-top: 35px;
-}
-
-.feedback__btn {
-  min-width: 265px;
-  min-height: 45px;
-  margin-bottom: 10px;
-  margin-right: 50px;
-  padding: 15px 25px;
-  justify-content: center;
-  align-items: center;
-  justify-self: start;
-  font-size: 16px;
-  line-height: 15px;
-  color: inherit;
-  background-color: $color-black-pearl;
-
-  @include focus {
-    outline: 3px dashed rgba($color-black-pearl, 0.6);
+  @include vp-767 {
+    margin-bottom: 40px;
+    font-size: 14px;
+    line-height: 15px;
   }
-}
-
-label:last-of-type {
-  display: flex;
-  align-items: center;
-  width: fit-content;
-  height: 45px;
-  order: 2;
-  font-size: 14px;
-  line-height: 15px;
 }

@@ -79,7 +79,7 @@
           <div class="hero__container container">
             <h1>Печатные платы</h1>
             <p>производство и&nbsp;монтаж, поставка комплектующих, блоков и&nbsp;модулей</p>
-            <a class="hero__btn btn btn--add focus-visible" href="#name">
+            <a class="hero__btn btn btn--add focus-visible" href="#feedback">
               <span class="hero__btn-big">Получить бесплатную консультацию</span>
               <span class="hero__btn-small">Бесплатная консультация</span>
             </a>
@@ -198,34 +198,42 @@
           </div>
         </section>
 
-        <section class="main__feedback feedback">
+        <section class="main__feedback feedback" id="feedback">
           <div class="feedback__container container">
             <div class="feedback__background-wrapper">
               <picture>
+                <source media="(max-width: 1023px)" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==" sizes="100%">
                 <source srcset="./img/feedback-bg-large.webp, ./img/feedback-bg-large@2x.webp 2x" type="image/webp">
                 <img class="feedback__background" src="./img/feedback-bg-large.png" srcset="./img/feedback-bg-large@2x.png 2x" width="510" height="285" aria-hidden="true">
               </picture>
             </div>
             <div class="feedback__wrapper">
-              <h2 class="feedback__title title">Остались вопросы? Задайте их нам!</h2>
-              <p class="feedback__txt">Мы проконсультируем Вас бесплатно</p>
-              <form action="https://echo.htmlacademy.ru/" method="post">
-                <div class="feedback__form-wrapper">
-                  <label class="visually-hidden" for="name">Ваше имя.</label>
-                  <input type="text" name="name" id="name" placeholder="Имя" required pattern="[A-Za-z]{1,50}">
-                  <label class="visually-hidden" for="phone">Ваш контактный телефон.</label>
-                  <input type="number" name="phone" id="phone" placeholder="Телефон" required>
-                  <label class="visually-hidden" for="text">Ваш вопрос.</label>
-                  <textarea name="text" id="text" placeholder="Ваш вопрос"></textarea>
-                </div>
-                  <div class="feedback__btn-wrapper">
-                    <label for="personal">
-                      <input type="checkbox" name="personal" id="personal" required tabindex="0">
+              <h2>Остались вопросы? Задайте их нам!</h2>
+              <p>Мы проконсультируем Вас бесплатно</p>
+
+              <!-- feedback form start -->
+              <div class="feedback__form feedback-form">
+                <form action="https://echo.htmlacademy.ru/" method="post">
+                  <div class="feedback-form__input-wrapper">
+                    <label class="visually-hidden" for="name">Ваше имя:</label>
+                    <input type="text" name="name" id="name" autocorrect="off" spellcheck="false" placeholder="Имя" required pattern="[A-Za-z]{1,50}">
+                    <label class="visually-hidden" for="phone">Ваш контактный телефон:</label>
+                    <input type="number" name="phone" id="phone" placeholder="Телефон" required>
+                    <label class="visually-hidden" for="text">Ваш вопрос:</label>
+                    <textarea name="text" id="text" autocomplete placeholder="Ваш вопрос"></textarea>
+                  </div>
+                  <div class="feedback-form__button-wrapper">
+                    <label for="agreement">
+                      <input class="visually-hidden" type="checkbox" name="agreement" id="agreement" required>
+                      <span></span>
                       <span>Я согласен на&nbsp;обработку<br>персональных данных</span>
                     </label>
-                    <button class="feedback__btn btn btn--add focus-visible" type="submit">Задать вопрос</button>
+                    <button class="feedback-form__btn btn focus-visible" type="submit">Задать вопрос</button>
                   </div>
                 </form>
+              </div>
+              <!-- feedback form end -->
+
             </div>
           </div>
         </section>
