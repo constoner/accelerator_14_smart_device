@@ -1,16 +1,16 @@
 .features {
   padding-top: 120px;
-  padding-bottom: 120px;
+  padding-bottom: 60px;
   background-color: $color-alice-blue-bg;
 
   @include vp-1023 {
     padding-top: 80px;
-    padding-bottom: 80px;
+    padding-bottom: 40px;
   }
 
   @include vp-767 {
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 25px;
   }
 }
 
@@ -96,8 +96,8 @@
 }
 
 .features__item:hover {
-  @media (min-width: 768px) {
 
+  @include hover {
     background-color: $color-deep-sky-blue;
     border-color: $color-deep-sky-blue;
 

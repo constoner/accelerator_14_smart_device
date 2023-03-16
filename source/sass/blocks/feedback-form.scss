@@ -1,3 +1,7 @@
+// .feedback-form form {
+//   width: 100%;
+// }
+
 .feedback-form__input-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -156,11 +160,19 @@
   }
 }
 
-.feedback-form__btn-wrapper label:hover span {
-  opacity: 0.6;
+.feedback-form__btn-wrapper label {
+
+  @include hover {
+    & span {
+      opacity: 0.6;
+    }
+  }
 }
 
 .feedback-form__btn-wrapper input[type="checkbox"] {
+  width: 1px;
+  height: 1px;
+
   @include focus {
     & ~ span {
       outline: 3px dashed $color-white-trasparent;

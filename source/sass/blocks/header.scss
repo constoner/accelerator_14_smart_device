@@ -29,7 +29,9 @@
   display: grid;
   grid-template-columns: minmax(1fr, 375px) minmax(1fr, 625px) minmax(175px, 238px);
   gap: 10px 0;
+  // justify-content: start;
   align-items: center;
+
 
   @include vp-1023 {
     display: flex;
@@ -39,6 +41,7 @@
 
 .header__logo {
   grid-column: 1/2;
+  justify-self: start;
 
   @include vp-1023 {
     flex-grow: 0;

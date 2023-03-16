@@ -123,16 +123,15 @@
     }
   }
 
-  @media (min-width: 767px) {
-    &:hover {
-      &::before {
-        background-color: $color-deep-sky-blue;
-        opacity: 0.8;
-      }
+  @include hover {
 
-      &::after {
-        opacity: 0;
-      }
+    &::before {
+      background-color: $color-deep-sky-blue;
+      opacity: 0.8;
+    }
+
+    &::after {
+      opacity: 0;
     }
   }
 
