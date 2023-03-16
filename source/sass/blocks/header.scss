@@ -27,9 +27,8 @@
 
 .header__container {
   display: grid;
-  grid-template-columns: minmax(1fr, 375px) minmax(1fr, 625px) minmax(175px, 238px);
-  gap: 10px 0;
-  // justify-content: start;
+  grid-template-columns: auto 495px auto;
+  gap: 10px 10px;
   align-items: center;
 
 
@@ -56,24 +55,25 @@
   }
 }
 
-.header__image {
-  margin-right: 15px;
-}
-
 .header__contacts {
   grid-column: 2/3;
-  max-width: 480px;
+  justify-self: stretch;
+  max-width: 100%;
+  margin-bottom: 7px;
+  margin-left: 15px;
 }
 
 .header__btn {
   grid-column: 3/4;
-  justify-self: start;
+  justify-self: end;
   min-width: 160px;
   min-height: 40px;
-  margin-left: 15px;
-  padding: 11px 15px;
+  margin-right: 60px;
+  margin-bottom: 5px;
+  padding: 10px 15px;
+  padding-bottom: 13px;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 14px;
   color: $color-alice-blue-txt;
   background-color: transparent;
   border: 1px solid $color-alice-blue-txt;

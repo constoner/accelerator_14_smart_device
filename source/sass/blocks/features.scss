@@ -30,6 +30,7 @@
 .features__item {
   min-height: 300px;
   padding: 40px 45px;
+  padding-left: 40px;
   background-color: $color-alice-blue-bg;
   border: 1px solid $color-whisper;
   border-left: 5px solid $color-deep-sky-blue;
@@ -62,7 +63,7 @@
 
 .features__title {
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 13px;
   font-size: 24px;
   line-height: 35px;
   color: $color-deep-sky-blue;

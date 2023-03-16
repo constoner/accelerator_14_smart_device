@@ -1,6 +1,6 @@
 .contacts {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 50.5% 50%;
   gap: 30px 10px;
 
   @include vp-1023 {
@@ -17,7 +17,7 @@
 .contacts__link {
   display: flex;
   width: fit-content;
-  padding: 15px 0;
+  padding: 7px 0;
   align-items: center;
   font-style: normal;
   color: inherit;

@@ -68,7 +68,9 @@
 
 .feedback h2 {
   margin: 0;
+  margin-top: -2px;
   margin-bottom: 15px;
+  margin-left: -4px;
   font-family: $ff-title;
   font-weight: 400;
   font-size: 36px;
@@ -87,7 +89,7 @@
 
 .feedback p {
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 37px;
   font-size: 16px;
   line-height: 20px;
 
