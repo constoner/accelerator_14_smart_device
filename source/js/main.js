@@ -1,5 +1,8 @@
+import './utils/ios-checker'
 import {iosVhFix} from './utils/ios-vh-fix';
 import './utils/focus-visible-polyfill';
+import './utils/focus-lock';
+import './utils/scroll-lock';
 import {smoothScroll} from './utils/smooth-scroll';
 import {initSpoiler} from './modules/spoiler/spoiler';
 import {initModals} from './modules/modals/init-modals';

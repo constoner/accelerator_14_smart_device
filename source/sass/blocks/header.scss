@@ -75,6 +75,7 @@
   font-size: 14px;
   line-height: 16px;
   color: $color-alice-blue-txt;
+  background-color: transparent;
   border: 1px solid $color-alice-blue-txt;
 
   @include vp-1023 {

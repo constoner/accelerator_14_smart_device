@@ -1,9 +1,9 @@
 .modal {
   position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  top: -1000%;
+  right: -1000%;
+  bottom: -1000%;
+  left: -1000%;
   z-index: 1000;
 
   display: flex;
@@ -11,8 +11,8 @@
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 
-  background-color: rgba($color-default-black, 0.8);
-  transform: scale(1.2);
+  background-color: rgba($color-black-pearl, 0.7);
+  transform: scale(0);
   visibility: hidden;
   opacity: 0;
 
@@ -27,6 +27,51 @@
 
   &::-webkit-scrollbar {
     display: none;
+  }
+
+  &__close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: 2px solid transparent;
+    border-radius: 3px;
+    transition: border-color $trans-default;
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 17px;
+      left: 4px;
+      display: block;
+      width: 28px;
+      height: 2px;
+      background-color: $color-default-white;
+      transform: rotate(45deg);
+      content: "";
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+
+    @include hover {
+      border: 2px solid $color-default-white;
+    }
+
+    @include focus {
+      outline: 3px dashed $color-white-trasparent;
+    }
+
+    &:active  {
+      opacity: 0.6;
+    }
   }
 
   &__wrapper {
@@ -59,30 +104,52 @@
   &__content {
     position: relative;
 
-    width: 600px;
+    max-width: 500px;
     padding: 40px;
-
-    background-color: $color-default-white;
+    color: $color-default-white;
+    background-color: $color-deep-sky-blue;
+    border-radius: 3px;
 
     @include vp-767 {
       width: 100%;
       padding: 20px;
     }
-  }
 
-  &__close-btn {
-    position: absolute;
-    top: 22px;
-    right: 22px;
-    z-index: 1;
+    & h2  {
+      margin: 0;
+      margin-bottom: 15px;
+      font-family: $ff-title;
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 30px;
 
-    width: 40px;
-    height: 40px;
-    padding: 0;
+      @include vp-1023 {
+        margin-bottom: 10px;
+      }
 
-    background: $color-transparent;
-    border: none;
-    cursor: pointer;
+      @include vp-767 {
+        margin-bottom: 20px;
+        font-size: 30px;
+        line-height: 35px;
+      }
+    }
+
+    & p {
+      margin: 0;
+      margin-bottom: 40px;
+      font-size: 16px;
+      line-height: 20px;
+
+      @include vp-1023 {
+        margin-bottom: 25px;
+      }
+
+      @include vp-767 {
+        margin-bottom: 40px;
+        font-size: 14px;
+        line-height: 15px;
+      }
+    }
   }
 
   &--responsive {
