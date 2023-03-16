@@ -1,6 +1,6 @@
 function initSpoiler() {
-  const spoilerButton = document.querySelector('.spoiler-btn');
-  const spoilerontainer = document.querySelector('.spoiler');
+  const spoilerontainer = document.querySelector('[data-spoiler="container"]');
+  const spoilerButton = document.querySelector('[data-spoiler="button"]');
 
   const toggleSpoiler = () => {
     if (spoilerontainer.classList.contains('is-shown')) {
