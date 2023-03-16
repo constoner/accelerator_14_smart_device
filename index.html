@@ -30,6 +30,7 @@
   </head>
   <body>
     <div class="wrapper">
+
       <!-- header -->
       <header class="header">
         <div class="header__container container">
@@ -59,10 +60,11 @@
                   <span class="contacts__txt">+7 (495) 000 52 52</span>
                 </a>
             </address>
-            <a class="header__btn btn" href="#">Заказать звонок</a>
+            <button class="header__btn btn" type="button" data-open-modal="modal">Заказать звонок</button>
         </div>
       </header>
 
+      <!-- main -->
       <main class="main">
         <section class="main__hero hero">
           <div class="hero__background">
@@ -137,7 +139,7 @@
           </div>
           <div class="about__content">
             <h2>О компании</h2>
-            <div class="about__spoiler spoiler">
+            <div class="about__spoiler spoiler" data-spoiler="container">
               <p>
                 Мы&nbsp;поставляем электронные комплектующие, производим печатные платы и&nbsp;предоставляем мировые технологии с&nbsp;1997&nbsp;года. Выполняем срочные заказы и&nbsp;пилотные образцы до&nbsp;10&nbsp;дней.
               </p>
@@ -149,7 +151,7 @@
               </p>
             </div>
           </div>
-          <button class="about__btn btn spoiler-btn" type="button">Подробнее</button>
+          <button class="about__btn btn spoiler-btn" type="button" data-spoiler="button">Подробнее</button>
         </section>
 
         <section class="main__services services" id="services">
@@ -218,22 +220,22 @@
                 <form action="https://echo.htmlacademy.ru/" method="post">
                   <div class="feedback-form__input-wrapper">
                     <div class="feedback-form__validation" data-validate-type="text" data-limitation="letters"data-required>
-                      <label class="visually-hidden" for="name">Ваше имя:</label>
-                      <input type="text" name="name" id="name" autocorrect="off" spellcheck="false" placeholder="Имя" required pattern="[A-Za-z]{1,50}" aria-invalid="true">
+                      <label class="visually-hidden" for="name--modal">Ваше имя:</label>
+                      <input type="text" name="name--modal" id="name--modal" autocorrect="off" spellcheck="false" placeholder="Имя" required pattern="[A-Za-z]{1,50}" aria-invalid="true">
                     </div>
                     <div class="feedback-form__validation" data-validate-type="phone"data-required>
-                      <label class="visually-hidden" for="phone">Ваш контактный телефон:</label>
-                      <input type="tel" name="phone" id="phone" placeholder="Телефон" required aria-invalid="true">
+                      <label class="visually-hidden" for="phone--modal">Ваш контактный телефон:</label>
+                      <input type="tel" name="phone--modal" id="phone--modal" placeholder="Телефон" required aria-invalid="true">
                     </div>
-                    <label class="visually-hidden" for="text">Ваш вопрос:</label>
-                    <textarea name="text" id="text" autocomplete placeholder="Ваш вопрос"></textarea>
+                    <label class="visually-hidden" for="text--modal">Ваш вопрос:</label>
+                    <textarea name="text--modal" id="text--modal" autocomplete placeholder="Ваш вопрос"></textarea>
                   </div>
                   <div class="feedback-form__btn-wrapper">
                     <div class="feedback-form__validation" data-validate-type="checkbox" data-required>
-                      <label for="agreement">
-                        <input class="visually-hidden" type="checkbox" name="agreement" id="agreement" required aria-invalid="true">
+                      <label for="agreement--modal">
+                        <input class="visually-hidden" type="checkbox" name="agreement--modal" id="agreement--modal" required aria-invalid="true">
                         <span></span>
-                        <span>Я согласен на&nbsp;обработку<br>персональных данных</span>
+                        <span>Я согласен на&nbsp;обработку <br>персональных данных</span>
                       </label>
                     </div>
                     <button class="feedback-form__btn btn" type="submit">Задать вопрос</button>
@@ -333,6 +335,49 @@
       </footer>
 
     </div>
+
+    <!-- модальное окно -->
+    <div class="modal" data-modal="modal" role="modal">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <section class="modal__content">
+          <button class="modal__close" type="button" aria-label="Закрыть модальное окно." data-close-modal></button>
+          <h2>Закажите звонок</h2>
+          <p>
+            Оставьте контакты, мы&nbsp;проконсультируем вас бесплатно в&nbsp;удобное время
+          </p>
+          <!-- feedback form start -->
+          <div class="modal__form feedback-form" data-form-validate data-callback="base">
+            <form action="https://echo.htmlacademy.ru/" method="post">
+              <div class="feedback-form__input-wrapper feedback-form__input-wrapper--modal">
+                <div class="feedback-form__validation" data-validate-type="text" data-limitation="letters"data-required>
+                  <label class="visually-hidden" for="name">Ваше имя:</label>
+                  <input type="text" name="name" id="name" autocorrect="off" spellcheck="false" placeholder="Имя" required pattern="[A-Za-z]{1,50}" aria-invalid="true" data-focus>
+                </div>
+                <div class="feedback-form__validation" data-validate-type="phone"data-required>
+                  <label class="visually-hidden" for="phone">Ваш контактный телефон:</label>
+                  <input type="tel" name="phone" id="phone" placeholder="Телефон" required aria-invalid="true">
+                </div>
+                <label class="visually-hidden" for="text">Ваш вопрос:</label>
+                <textarea name="text" id="text" autocomplete placeholder="Ваш вопрос"></textarea>
+              </div>
+              <div class="feedback-form__btn-wrapper feedback-form__btn-wrapper--modal">
+                <div class="feedback-form__validation" data-validate-type="checkbox" data-required>
+                  <label for="agreement">
+                    <input class="visually-hidden" type="checkbox" name="agreement" id="agreement" required aria-invalid="true">
+                    <span></span>
+                    <span>Я согласен на&nbsp;обработку <br>персональных данных</span>
+                  </label>
+                </div>
+                <button class="feedback-form__btn btn" type="submit">Задать вопрос</button>
+              </div>
+            </form>
+          </div>
+          <!-- feedback form end -->
+        </section>
+      </div>
+    </div>
+
     <script src="js/main.min.js" type="module"></script>
   </body>
 </html>
