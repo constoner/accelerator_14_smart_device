@@ -73,8 +73,7 @@
 
   &:disabled,
   &.disabled {
-    color: lightgrey;
+    color: $color-black-pearl-transparent;
     pointer-events: none;
   }
-
 }

@@ -698,7 +698,7 @@ button,
 
 .btn--add:disabled,
 .btn--add.disabled {
-  color: lightgrey;
+  color: rgba(4, 24, 39, 0.5);
   pointer-events: none;
 }
 
@@ -1543,7 +1543,7 @@ button,
   background-repeat: no-repeat;
   background-position: center;
   background-size: 5px 10px;
-  border-radius: 3px 0px 0px 0px;
+  border-radius: 3px 0 0 0;
   opacity: 1;
   -webkit-transition: opacity 0.2s ease-out;
   -o-transition: opacity 0.2s ease-out;
@@ -2277,7 +2277,6 @@ button,
 
   .footer__title {
     position: relative;
-    margin-bottom: 0;
     margin: 0 -100px;
     padding: 15px 100px;
   }

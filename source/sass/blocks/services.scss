@@ -101,7 +101,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: 5px 10px;
-    border-radius: 3px 0px 0px 0px;
+    border-radius: 3px 0 0 0;
     opacity: 1;
     transition: opacity $trans-default;
     content: "";
@@ -124,7 +124,6 @@
   }
 
   @include hover {
-
     &::before {
       background-color: $color-deep-sky-blue;
       opacity: 0.8;

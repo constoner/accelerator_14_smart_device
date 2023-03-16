@@ -1,4 +1,4 @@
-import './utils/ios-checker'
+import './utils/ios-checker';
 import {iosVhFix} from './utils/ios-vh-fix';
 import './utils/focus-visible-polyfill';
 import './utils/focus-lock';

@@ -147,6 +147,12 @@
   font-size: 14px;
   line-height: 15px;
   cursor: pointer;
+
+  @include hover {
+    & span {
+      opacity: 0.6;
+    }
+  }
 }
 
 .feedback-form__btn-wrapper span {
@@ -184,15 +190,6 @@
 .feedback-form__btn-wrapper input[type="checkbox"]:checked + span {
   &::before {
     opacity: 1;
-  }
-}
-
-.feedback-form__btn-wrapper label {
-
-  @include hover {
-    & span {
-      opacity: 0.6;
-    }
   }
 }
 
