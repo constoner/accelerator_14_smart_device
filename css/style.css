@@ -726,9 +726,9 @@ button,
 .header__container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: minmax(1fr, 375px) minmax(1fr, 625px) minmax(175px, 238px);
-  grid-template-columns: minmax(1fr, 375px) minmax(1fr, 625px) minmax(175px, 238px);
-  gap: 10px 0;
+  -ms-grid-columns: auto 495px auto;
+  grid-template-columns: auto 495px auto;
+  gap: 10px 10px;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -742,29 +742,31 @@ button,
   justify-self: start;
 }
 
-.header__image {
-  margin-right: 15px;
-}
-
 .header__contacts {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
-  max-width: 480px;
+  -ms-grid-column-align: stretch;
+  justify-self: stretch;
+  max-width: 100%;
+  margin-bottom: 7px;
+  margin-left: 15px;
 }
 
 .header__btn {
   -ms-grid-column: 3;
   -ms-grid-column-span: 1;
   grid-column: 3/4;
-  -ms-grid-column-align: start;
-  justify-self: start;
+  -ms-grid-column-align: end;
+  justify-self: end;
   min-width: 160px;
   min-height: 40px;
-  margin-left: 15px;
-  padding: 11px 15px;
+  margin-right: 60px;
+  margin-bottom: 5px;
+  padding: 10px 15px;
+  padding-bottom: 13px;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 14px;
   color: #f2f5f6;
   background-color: transparent;
   border: 1px solid #f2f5f6;
@@ -808,8 +810,8 @@ button,
 
 .modal__close {
   position: absolute;
-  top: 12px;
-  right: 12px;
+  top: 14px;
+  right: 14px;
   display: block;
   width: 40px;
   height: 40px;
@@ -882,7 +884,9 @@ button,
 
 .modal__content {
   position: relative;
-  max-width: 500px;
+  top: -1px;
+  left: -8px;
+  width: 500px;
   padding: 40px;
   color: #ffffff;
   background-color: #00b2ff;
@@ -891,7 +895,8 @@ button,
 
 .modal__content h2 {
   margin: 0;
-  margin-bottom: 15px;
+  margin-top: 3px;
+  margin-bottom: 12px;
   font-family: "Roboto Condensed", "Arial Narrow", sans-serif;
   font-weight: 400;
   font-size: 30px;
@@ -955,8 +960,8 @@ button,
 .contacts {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 50.5% 50%;
+  grid-template-columns: 50.5% 50%;
   gap: 30px 10px;
 }
 
@@ -967,7 +972,7 @@ button,
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  padding: 15px 0;
+  padding: 7px 0;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -999,9 +1004,9 @@ button,
 .footer {
   margin-top: auto;
   padding-top: 50px;
-  padding-bottom: 55px;
+  padding-bottom: 56px;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 20.5px;
   color: rgba(255, 255, 255, 0.7);
   background-color: #041827;
 }
@@ -1259,10 +1264,12 @@ button,
 
 .hero h1 {
   margin: 0;
-  margin-bottom: 40px;
+  margin-left: 5px;
+  margin-top: 26px;
+  margin-bottom: 32px;
   font-family: "Roboto Condensed", "Arial Narrow", sans-serif;
   font-size: 80px;
-  line-height: 94px;
+  line-height: 90px;
   font-weight: 700;
   letter-spacing: 0.07em;
   text-transform: uppercase;
@@ -1270,14 +1277,16 @@ button,
 
 .hero p {
   margin: 0;
-  margin-bottom: 40px;
+  margin-left: 5px;
+  margin-bottom: 48px;
   font-size: 22px;
-  line-height: 34px;
+  line-height: 35px;
 }
 
 .hero__btn {
   min-width: 410px;
   min-height: 55px;
+  margin-left: 5px;
   padding: 15px 25px;
   -ms-grid-column-align: start;
   justify-self: start;
@@ -1315,6 +1324,7 @@ button,
 .features__item {
   min-height: 300px;
   padding: 40px 45px;
+  padding-left: 40px;
   background-color: #f8fdff;
   border: 1px solid #ebebeb;
   border-left: 5px solid #00b2ff;
@@ -1335,7 +1345,7 @@ button,
 
 .features__title {
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 13px;
   font-size: 24px;
   line-height: 35px;
   color: #00b2ff;
@@ -1363,16 +1373,16 @@ button,
   -ms-grid-rows: 60px 0 fit-content 0 65px;
   grid-template-rows: 60px -webkit-fit-content 65px;
   grid-template-rows: 60px fit-content 65px;
-  grid-template-areas: "image title" "image text" "image button";
+  grid-template-areas: "image content" "image button";
   gap: 0;
   padding-top: 60px;
-  padding-bottom: 100px;
+  padding-bottom: 97px;
   scroll-margin-top: 120px;
 }
 
 .about__image-container {
   -ms-grid-row: 1;
-  -ms-grid-row-span: 5;
+  -ms-grid-row-span: 3;
   -ms-grid-column: 1;
   grid-area: image;
   margin-right: 30px;
@@ -1385,12 +1395,15 @@ button,
   object-fit: contain;
 }
 
-.about h2 {
+.about__content {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
-  grid-area: title;
+  grid-area: content;
+}
+
+.about h2 {
   margin: 0;
-  margin-top: 5px;
+  margin-top: 3px;
   margin-bottom: 15px;
   font-family: "Roboto Condensed", "Arial Narrow", sans-serif;
   font-weight: 400;
@@ -1400,9 +1413,6 @@ button,
 }
 
 .about__spoiler {
-  -ms-grid-row: 3;
-  -ms-grid-column: 3;
-  grid-area: text;
   max-height: 170px;
   margin: 0;
   font-size: 16px;
@@ -1424,15 +1434,11 @@ button,
 
 .about p {
   margin: 0;
-  margin-bottom: 30px;
-}
-
-.about p:last-child {
-  margin-bottom: 0;
+  margin-bottom: 20px;
 }
 
 .about__btn {
-  -ms-grid-row: 5;
+  -ms-grid-row: 3;
   -ms-grid-column: 3;
   grid-area: button;
   -ms-grid-column-align: start;
@@ -1443,10 +1449,10 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -ms-grid-row-align: start;
+  align-self: start;
   min-width: 180px;
   min-height: 45px;
-  margin-top: 20px;
-  margin-bottom: 20px;
   font-size: 14px;
   line-height: 23px;
   letter-spacing: 0.05em;
@@ -1471,7 +1477,7 @@ button,
 }
 
 .services {
-  padding-top: 70px;
+  padding-top: 66px;
   padding-bottom: 140px;
   color: #ffffff;
   background-color: #041827;
@@ -1480,7 +1486,7 @@ button,
 
 .services__title {
   margin: 0;
-  margin-bottom: 50px;
+  margin-bottom: 54px;
   font-size: 36px;
   line-height: 50px;
 }
@@ -1511,7 +1517,7 @@ button,
   padding: 50px 60px 60px 40px;
   font-family: "Roboto Condensed", "Arial Narrow", sans-serif;
   font-size: 20px;
-  line-height: 25px;
+  line-height: 27px;
   color: inherit;
 }
 
@@ -1630,7 +1636,9 @@ button,
 
 .feedback h2 {
   margin: 0;
+  margin-top: -2px;
   margin-bottom: 15px;
+  margin-left: -4px;
   font-family: "Roboto Condensed", "Arial Narrow", sans-serif;
   font-weight: 400;
   font-size: 36px;
@@ -1639,7 +1647,7 @@ button,
 
 .feedback p {
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 37px;
   font-size: 16px;
   line-height: 20px;
 }
@@ -1662,7 +1670,7 @@ button,
 .feedback-form input,
 .feedback-form textarea {
   width: 100%;
-  padding: 15px;
+  padding: 12px;
   font-size: 16px;
   line-height: 20px;
   color: #ffffff;
@@ -1709,7 +1717,7 @@ button,
 .feedback-form textarea {
   grid-column: 1/-1;
   height: 155px;
-  padding-top: 25px;
+  padding-top: 23px;
 }
 
 .feedback-form *::-webkit-input-placeholder {
@@ -1774,6 +1782,9 @@ button,
 }
 
 .feedback-form__btn-wrapper--modal label {
+  margin-top: -2px;
+  margin-bottom: 2px;
+  margin-left: 9px;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -1786,7 +1797,7 @@ button,
   min-width: 265px;
   min-height: 45px;
   margin-right: 50px;
-  padding: 15px 25px;
+  padding: 17px 25px 13px;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
