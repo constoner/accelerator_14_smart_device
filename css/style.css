@@ -723,6 +723,21 @@ button,
   background-size: cover;
 }
 
+.header--base {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(84.9%, #041827), to(rgba(4, 24, 39, 0)));
+  background-image: -o-linear-gradient(top, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
+  background-image: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.header--mod {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(84.9%, #026693), to(rgba(2, 102, 147, 0)));
+  background-image: -o-linear-gradient(top, #026693 84.9%, rgba(2, 102, 147, 0) 100%);
+  background-image: linear-gradient(180deg, #026693 84.9%, rgba(2, 102, 147, 0) 100%);
+}
+
 .header__container {
   display: -ms-grid;
   display: grid;
@@ -884,7 +899,7 @@ button,
 
 .modal__content {
   position: relative;
-  top: -1px;
+  top: 51px;
   left: -8px;
   width: 500px;
   padding: 40px;
@@ -1425,6 +1440,10 @@ button,
   transition: max-height 0.2s ease-out;
 }
 
+.about__spoiler br {
+  display: none;
+}
+
 .about__spoiler.is-shown {
   max-height: 1000px;
   -webkit-transition: max-height 0.2s ease-in;
@@ -1517,7 +1536,7 @@ button,
   padding: 50px 60px 60px 40px;
   font-family: "Roboto Condensed", "Arial Narrow", sans-serif;
   font-size: 20px;
-  line-height: 27px;
+  line-height: 27.5px;
   color: inherit;
 }
 
@@ -1971,6 +1990,11 @@ button,
     margin-right: 0;
   }
 
+  .header__contacts {
+    margin-left: 0;
+    margin-right: 20px;
+  }
+
   .header__btn {
     display: none;
   }
@@ -1987,10 +2011,10 @@ button,
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-right: 20px;
     -ms-flex-item-align: start;
     -ms-grid-row-align: start;
     align-self: start;
+    gap: unset;
   }
 
   .contacts__link {
@@ -1999,12 +2023,17 @@ button,
     padding: 10px;
   }
 
+  .contacts__link + .contacts__link {
+    margin-left: 20px;
+  }
+
   .contacts__txt {
     display: none;
   }
 
   .footer {
     padding-bottom: 65px;
+    line-height: 20px;
   }
 
   .footer__container {
@@ -2022,6 +2051,7 @@ button,
     -ms-flex-pack: justify;
     justify-content: space-between;
     grid-column: 1/-1;
+    margin-right: -5px;
   }
 
   .footer__logo {
@@ -2053,25 +2083,38 @@ button,
     gap: 10px;
   }
 
+  .footer-list--add {
+    gap: 6px;
+  }
+
   .footer-list--add .footer-list__item:first-child {
     margin-bottom: 10px;
   }
 
   .hero {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
     min-height: 640px;
     margin-top: -100px;
     padding-top: 100px;
-    padding-bottom: 140px;
+    padding-bottom: 100px;
+  }
+
+  .hero__container {
+    margin-top: 86px;
   }
 
   .hero h1 {
-    margin-bottom: 20px;
+    margin: 0;
+    margin-bottom: 8px;
     font-size: 64px;
-    line-height: 75px;
+    line-height: 60px;
   }
 
   .hero p {
-    margin-bottom: 50px;
+    margin: 0;
+    margin-bottom: 56px;
   }
 
   .hero__btn {
@@ -2080,7 +2123,7 @@ button,
 
   .features {
     padding-top: 80px;
-    padding-bottom: 40px;
+    padding-bottom: 31px;
   }
 
   .features__item {
@@ -2093,7 +2136,7 @@ button,
   }
 
   .features__txt {
-    line-height: 20px;
+    line-height: 21.5px;
   }
 
   .about {
@@ -2104,8 +2147,16 @@ button,
     scroll-margin-top: unset;
   }
 
+  .about__image-container {
+    margin-top: 7px;
+  }
+
+  .about__content {
+    margin-left: -5px;
+  }
+
   .about__spoiler {
-    max-height: 255px;
+    max-height: 277px;
   }
 
   .about p {
@@ -2114,12 +2165,17 @@ button,
 
   .about__btn {
     margin-bottom: 0;
+    margin-left: -5px;
   }
 
   .services {
-    padding-top: 60px;
+    padding-top: 56px;
     padding-bottom: 75px;
     scroll-margin-top: unset;
+  }
+
+  .services__title {
+    margin-bottom: 39px;
   }
 
   .services__list {
@@ -2145,7 +2201,7 @@ button,
   }
 
   .feedback {
-    padding-top: 50px;
+    padding-top: 51px;
     padding-bottom: 125px;
     scroll-margin-top: unset;
   }
@@ -2160,15 +2216,24 @@ button,
   }
 
   .feedback h2 {
+    margin-left: 1px;
     margin-bottom: 10px;
   }
 
   .feedback p {
-    margin-bottom: 25px;
+    margin-bottom: 27px;
+  }
+
+  .feedback-form textarea {
+    padding-top: 28px;
   }
 
   .feedback-form__btn {
     margin-right: 85px;
+  }
+
+  .feedback-form__btn-wrapper label {
+    margin-bottom: 5px;
   }
 }
 
@@ -2199,12 +2264,17 @@ button,
 
   .header {
     min-height: 70px;
-    padding-top: 15px;
+    padding-top: 10px;
     padding-bottom: 20px;
   }
 
   .header__logo {
     width: 35px;
+  }
+
+  .header__contacts {
+    margin: 0;
+    margin-right: 10px;
   }
 
   .modal__wrapper {
@@ -2232,14 +2302,11 @@ button,
     width: 100%;
   }
 
-  .contacts {
-    margin-right: 9px;
-  }
-
   .footer {
-    padding-top: 32px;
+    padding-top: 34px;
     padding-bottom: 35px;
     overflow: hidden;
+    font-size: 14px;
   }
 
   .footer__container {
@@ -2256,6 +2323,7 @@ button,
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    margin-right: 6px;
   }
 
   .footer__social-list {
@@ -2290,6 +2358,7 @@ button,
     position: relative;
     margin: 0 -100px;
     padding: 15px 100px;
+    padding-bottom: 14px;
   }
 
   .footer__title::before,
@@ -2326,8 +2395,14 @@ button,
     grid-template-columns: 1fr;
   }
 
+  .footer-list--add {
+    padding-top: 2px;
+    margin-left: -2px;
+    gap: 11px;
+  }
+
   .footer-list__item:last-child {
-    margin-bottom: 15px;
+    margin-bottom: 11px;
   }
 
   .footer-list--add .footer-list__item:first-child {
@@ -2337,23 +2412,20 @@ button,
   .hero {
     min-height: 560px;
     margin-top: -70px;
-    padding-top: 70px;
+    padding-top: 64px;
     padding-bottom: 105px;
   }
 
   .hero h1 {
     font-size: 36px;
-    line-height: 38px;
-    margin-bottom: 20px;
+    line-height: 42px;
+    margin-bottom: 7px;
   }
 
   .hero p {
     font-size: 14px;
-    line-height: 18px;
-  }
-
-  .hero__btn {
-    margin-left: 0;
+    line-height: 22px;
+    margin-bottom: 45px;
   }
 
   .hero__btn {
@@ -2361,7 +2433,8 @@ button,
     justify-self: stretch;
     min-width: unset;
     min-height: 40px;
-    padding: 10px 30px;
+    margin-left: 0;
+    padding: 12px 30px;
     font-size: 14px;
     line-height: 16px;
   }
@@ -2380,7 +2453,7 @@ button,
 
   .features {
     padding-top: 50px;
-    padding-bottom: 25px;
+    padding-bottom: 10px;
   }
 
   .features__list {
@@ -2389,7 +2462,7 @@ button,
   }
 
   .features__item {
-    min-height: 325px;
+    min-height: 340px;
     padding: 30px;
     padding-bottom: 35px;
   }
@@ -2413,12 +2486,17 @@ button,
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     grid-template-areas: unset;
-    padding-top: 25px;
+    padding-top: 8px;
     padding-bottom: 80px;
   }
 
   .about__image-container {
     display: none;
+  }
+
+  .about__content {
+    grid-area: unset;
+    margin-left: 0;
   }
 
   .about h2 {
@@ -2428,27 +2506,32 @@ button,
   }
 
   .about__spoiler {
+    max-height: 210px;
     font-size: 14px;
     line-height: 19px;
   }
 
-  .about__spoiler {
-    max-height: 210px;
+  .about__spoiler br {
+    display: block;
   }
 
   .about__btn {
     grid-area: unset;
+    min-width: 160px;
+    min-height: 35px;
+    margin-top: 12px;
+    margin-left: 0;
   }
 
   .services {
-    padding-top: 50px;
+    padding-top: 48px;
     padding-bottom: 86px;
   }
 
   .services__title {
-    margin-bottom: 40px;
+    margin-bottom: 32px;
     font-size: 28px;
-    line-height: 32px;
+    line-height: 37px;
   }
 
   .services__title--big {
@@ -2462,7 +2545,7 @@ button,
   .services__link {
     padding: 30px 40px 40px 30px;
     font-size: 18px;
-    line-height: 25px;
+    line-height: 27px;
   }
 
   .services__link::after {
@@ -2480,15 +2563,15 @@ button,
   }
 
   .feedback h2 {
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     font-size: 30px;
-    line-height: 35px;
+    line-height: 40px;
   }
 
   .feedback p {
-    margin-bottom: 40px;
+    margin-bottom: 36px;
     font-size: 14px;
-    line-height: 15px;
+    line-height: 16.5px;
   }
 
   .feedback-form__input-wrapper {
@@ -2499,6 +2582,7 @@ button,
   }
 
   .feedback-form textarea {
+    padding-top: 23px;
     height: 180px;
   }
 
@@ -2516,6 +2600,11 @@ button,
     width: 100%;
     margin-right: 0;
     margin-bottom: 25px;
+  }
+
+  .feedback-form__btn-wrapper label {
+    margin-left: 5px;
+    margin-bottom: 0;
   }
 }
 
