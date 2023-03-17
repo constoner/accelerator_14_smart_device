@@ -61,6 +61,11 @@
   max-width: 100%;
   margin-bottom: 7px;
   margin-left: 15px;
+
+  @include vp-1023 {
+    margin-left: 0;
+    margin-right: 20px;
+  }
 }
 
 .header__btn {

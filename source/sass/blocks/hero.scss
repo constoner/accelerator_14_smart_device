@@ -22,10 +22,11 @@
   }
 
   @include vp-1023 {
+    justify-content: flex-start;
     min-height: 640px;
     margin-top: -100px;
     padding-top: 100px;
-    padding-bottom: 140px;
+    padding-bottom: 100px;
   }
 
   @include vp-767 {
@@ -45,6 +46,10 @@
   grid-template-rows: repeat(auto-fill, fit-content);
   justify-content: start;
   padding: 0 160px;
+
+  @include vp-1023 {
+    margin-top: 86px;
+  }
 }
 
 .hero__background {
@@ -74,15 +79,16 @@
   text-transform: uppercase;
 
   @include vp-1023 {
-    margin-bottom: 20px;
+    margin: 0;
+    margin-bottom: 8px;
     font-size: 64px;
-    line-height: 75px;
+    line-height: 60px;
   }
 
   @include vp-767 {
     font-size: 36px;
     line-height: 38px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 }
 
@@ -94,7 +100,8 @@
   line-height: 35px;
 
   @include vp-1023 {
-    margin-bottom: 50px;
+    margin: 0;
+    margin-bottom: 56px;
   }
 
   @include vp-767 {

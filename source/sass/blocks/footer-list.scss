@@ -20,6 +20,10 @@
     grid-template-rows: unset;
     grid-auto-flow: unset;
     gap: 10px;
+
+    &--add {
+      gap: 6px;
+    }
   }
 
   @include vp-767 {

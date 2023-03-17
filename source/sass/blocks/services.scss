@@ -6,7 +6,7 @@
   scroll-margin-top: 100px;
 
   @include vp-1023 {
-    padding-top: 60px;
+    padding-top: 56px;
     padding-bottom: 75px;
     scroll-margin-top: unset;
   }
@@ -22,6 +22,10 @@
   margin-bottom: 54px;
   font-size: 36px;
   line-height: 50px;
+
+  @include vp-1023 {
+    margin-bottom: 39px;
+  }
 
   &--small {
     display: none;
@@ -72,7 +76,7 @@
   padding: 50px 60px 60px 40px;
   font-family: $ff-title;
   font-size: 20px;
-  line-height: 27px;
+  line-height: 27.5px;
   color: inherit;
 
   &::before {
