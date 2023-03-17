@@ -2245,12 +2245,17 @@ button,
 
   .header {
     min-height: 70px;
-    padding-top: 15px;
+    padding-top: 10px;
     padding-bottom: 20px;
   }
 
   .header__logo {
     width: 35px;
+  }
+
+  .header__contacts {
+    margin: 0;
+    margin-right: 10px;
   }
 
   .modal__wrapper {
@@ -2279,9 +2284,10 @@ button,
   }
 
   .footer {
-    padding-top: 32px;
+    padding-top: 34px;
     padding-bottom: 35px;
     overflow: hidden;
+    font-size: 14px;
   }
 
   .footer__container {
@@ -2298,6 +2304,7 @@ button,
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    margin-right: 6px;
   }
 
   .footer__social-list {
@@ -2332,6 +2339,7 @@ button,
     position: relative;
     margin: 0 -100px;
     padding: 15px 100px;
+    padding-bottom: 14px;
   }
 
   .footer__title::before,
@@ -2368,8 +2376,14 @@ button,
     grid-template-columns: 1fr;
   }
 
+  .footer-list--add {
+    padding-top: 2px;
+    margin-left: -2px;
+    gap: 11px;
+  }
+
   .footer-list__item:last-child {
-    margin-bottom: 15px;
+    margin-bottom: 11px;
   }
 
   .footer-list--add .footer-list__item:first-child {
@@ -2379,23 +2393,20 @@ button,
   .hero {
     min-height: 560px;
     margin-top: -70px;
-    padding-top: 70px;
+    padding-top: 64px;
     padding-bottom: 105px;
   }
 
   .hero h1 {
     font-size: 36px;
-    line-height: 38px;
-    margin-bottom: 10px;
+    line-height: 42px;
+    margin-bottom: 7px;
   }
 
   .hero p {
     font-size: 14px;
-    line-height: 18px;
-  }
-
-  .hero__btn {
-    margin-left: 0;
+    line-height: 22px;
+    margin-bottom: 45px;
   }
 
   .hero__btn {
@@ -2403,7 +2414,8 @@ button,
     justify-self: stretch;
     min-width: unset;
     min-height: 40px;
-    padding: 10px 30px;
+    margin-left: 0;
+    padding: 12px 30px;
     font-size: 14px;
     line-height: 16px;
   }
@@ -2422,7 +2434,7 @@ button,
 
   .features {
     padding-top: 50px;
-    padding-bottom: 25px;
+    padding-bottom: 10px;
   }
 
   .features__list {
@@ -2431,7 +2443,7 @@ button,
   }
 
   .features__item {
-    min-height: 325px;
+    min-height: 340px;
     padding: 30px;
     padding-bottom: 35px;
   }
@@ -2455,12 +2467,17 @@ button,
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     grid-template-areas: unset;
-    padding-top: 25px;
+    padding-top: 8px;
     padding-bottom: 80px;
   }
 
   .about__image-container {
     display: none;
+  }
+
+  .about__content {
+    grid-area: unset;
+    margin-left: 0;
   }
 
   .about h2 {
@@ -2480,17 +2497,21 @@ button,
 
   .about__btn {
     grid-area: unset;
+    min-width: 160px;
+    min-height: 35px;
+    margin-top: 12px;
+    margin-left: 0;
   }
 
   .services {
-    padding-top: 50px;
+    padding-top: 48px;
     padding-bottom: 86px;
   }
 
   .services__title {
-    margin-bottom: 40px;
+    margin-bottom: 32px;
     font-size: 28px;
-    line-height: 32px;
+    line-height: 37px;
   }
 
   .services__title--big {
@@ -2504,7 +2525,7 @@ button,
   .services__link {
     padding: 30px 40px 40px 30px;
     font-size: 18px;
-    line-height: 25px;
+    line-height: 27px;
   }
 
   .services__link::after {
@@ -2522,15 +2543,15 @@ button,
   }
 
   .feedback h2 {
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     font-size: 30px;
-    line-height: 35px;
+    line-height: 40px;
   }
 
   .feedback p {
-    margin-bottom: 40px;
+    margin-bottom: 36px;
     font-size: 14px;
-    line-height: 15px;
+    line-height: 16.5px;
   }
 
   .feedback-form__input-wrapper {
@@ -2541,6 +2562,7 @@ button,
   }
 
   .feedback-form textarea {
+    padding-top: 23px;
     height: 180px;
   }
 
@@ -2558,6 +2580,11 @@ button,
     width: 100%;
     margin-right: 0;
     margin-bottom: 25px;
+  }
+
+  .feedback-form__btn-wrapper label {
+    margin-left: 5px;
+    margin-bottom: 0;
   }
 }
 
