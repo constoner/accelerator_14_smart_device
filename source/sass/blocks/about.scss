@@ -84,17 +84,22 @@
   will-change: max-height;
   transition: max-height $trans-default;
 
+  & br {
+    display: none;
+  }
+
   @include vp-1023 {
     max-height: 277px;
   }
 
   @include vp-767 {
+    max-height: 210px;
     font-size: 14px;
     line-height: 19px;
-  }
 
-  @include vp-767 {
-    max-height: 210px;
+    & br {
+      display: block;
+    }
   }
 }
 

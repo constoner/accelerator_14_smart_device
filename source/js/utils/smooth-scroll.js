@@ -1,6 +1,5 @@
 /* eslint-disable */
 function o() {
-    console.log('test!!!')
     let o = window; let t = document; if (!('scrollBehavior' in t.documentElement.style && !0 !== o.__forceSmoothScrollPolyfill__)) {
       let l; let e = o.HTMLElement || o.Element; var r = 468; var i = {scroll: o.scroll || o.scrollTo, scrollBy: o.scrollBy, elementScroll: e.prototype.scroll || n, scrollIntoView: e.prototype.scrollIntoView}; var s = o.performance && o.performance.now ? o.performance.now.bind(o.performance) : Date.now; var c = (l = o.navigator.userAgent, new RegExp(['MSIE ', 'Trident/', 'Edge/'].join('|')).test(l) ? 1 : 0); o.scroll = o.scrollTo = function () {
         void 0 !== arguments[0] && (!0 !== f(arguments[0]) ? h.call(o, t.body, void 0 !== arguments[0].left ? ~~arguments[0].left : o.scrollX || o.pageXOffset, void 0 !== arguments[0].top ? ~~arguments[0].top : o.scrollY || o.pageYOffset) : i.scroll.call(o, void 0 !== arguments[0].left ? arguments[0].left : typeof arguments[0] !== 'object' ? arguments[0] : o.scrollX || o.pageXOffset, void 0 !== arguments[0].top ? arguments[0].top : void 0 !== arguments[1] ? arguments[1] : o.scrollY || o.pageYOffset));

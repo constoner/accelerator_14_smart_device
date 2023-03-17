@@ -723,6 +723,21 @@ button,
   background-size: cover;
 }
 
+.header--base {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(84.9%, #041827), to(rgba(4, 24, 39, 0)));
+  background-image: -o-linear-gradient(top, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
+  background-image: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.header--mod {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(84.9%, #026693), to(rgba(2, 102, 147, 0)));
+  background-image: -o-linear-gradient(top, #026693 84.9%, rgba(2, 102, 147, 0) 100%);
+  background-image: linear-gradient(180deg, #026693 84.9%, rgba(2, 102, 147, 0) 100%);
+}
+
 .header__container {
   display: -ms-grid;
   display: grid;
@@ -884,7 +899,7 @@ button,
 
 .modal__content {
   position: relative;
-  top: -1px;
+  top: 51px;
   left: -8px;
   width: 500px;
   padding: 40px;
@@ -1423,6 +1438,10 @@ button,
   -webkit-transition: max-height 0.2s ease-out;
   -o-transition: max-height 0.2s ease-out;
   transition: max-height 0.2s ease-out;
+}
+
+.about__spoiler br {
+  display: none;
 }
 
 .about__spoiler.is-shown {
@@ -2487,12 +2506,13 @@ button,
   }
 
   .about__spoiler {
+    max-height: 210px;
     font-size: 14px;
     line-height: 19px;
   }
 
-  .about__spoiler {
-    max-height: 210px;
+  .about__spoiler br {
+    display: block;
   }
 
   .about__btn {
