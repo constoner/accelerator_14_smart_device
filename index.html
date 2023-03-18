@@ -1,390 +1,424 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Smart Device - производство и монтаж печатных плат, поставка комплектующих, блоков и модулей">
-    <title>Smart Device</title>
-    <link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="./favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="./favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="./favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="./favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="./favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="./favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="./favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="./favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
-    <link rel="manifest" href="./favicon/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="./favicon/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="css/style.min.css">
-    <link rel="preload" href="./fonts/PTMono-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/RobotoCondensed-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/RobotoCondensed-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  </head>
-  <body>
-    <div class="wrapper">
 
-      <!-- header -->
-      <header class="header header--base" data-header="sticky">
-        <div class="header__container container">
-          <a class="header__logo logo" href="./index.html">
-            <picture>
-              <source type="image/svg+xml" media="(max-width: 767px)" srcset="./img/svg/logo-small.svg" width="35" height="35">
-              <img
-                class="logo__image"
-                src="./img/svg/logo-large.svg"
-                width="215"
-                height="55"
-                alt="Логотип Smart Device."
-              >
-            </picture>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Smart Device - производство и монтаж печатных плат, поставка комплектующих, блоков и модулей">
+  <title>Smart Device</title>
+  <link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="./favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="./favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="./favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="./favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="./favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="./favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="./favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+  <link rel="manifest" href="./favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="./favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="./fonts/PTMono-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/RobotoCondensed-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/RobotoCondensed-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <!-- header -->
+    <header class="header header--base" data-header="sticky">
+      <div class="header__container container">
+        <a class="header__logo logo" href="./index.html">
+          <picture>
+            <source type="image/svg+xml" media="(max-width: 767px)" srcset="./img/svg/logo-small.svg" width="35"
+              height="35">
+            <img class="logo__image" src="./img/svg/logo-large.svg" width="215" height="55" alt="Логотип Smart Device.">
+          </picture>
+        </a>
+        <address class="header__contacts contacts">
+          <a class="contacts__link" href="mailto:info@sd.ru">
+            <svg class="contacts__icon contacts__icon--mail" width="20" height="20" fill="currentColor"
+              aria-hidden="true" focusable="false">
+              <use href="./img/sprite.svg#icon-mail" />
+            </svg>
+            <span class="contacts__txt">info@sd.ru</span>
           </a>
-            <address class="header__contacts contacts">
-                <a class="contacts__link" href="mailto:info@sd.ru">
-                  <svg class="contacts__icon contacts__icon--mail" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false">
-                    <use href="./img/sprite.svg#icon-mail"/>
-                  </svg>
-                  <span class="contacts__txt">info@sd.ru</span>
-                </a>
-                <a class="contacts__link" href="tel:+74950005252">
-                  <svg class="contacts__icon contacts__icon--phone" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false">
-                    <use href="./img/sprite.svg#icon-phone"/>
-                  </svg>
-                  <span class="contacts__txt">+7 (495) 000 52 52</span>
-                </a>
-            </address>
-            <button class="header__btn btn" type="button" data-open-modal="modal">Заказать звонок</button>
+          <a class="contacts__link" href="tel:+74950005252">
+            <svg class="contacts__icon contacts__icon--phone" width="20" height="20" fill="currentColor"
+              aria-hidden="true" focusable="false">
+              <use href="./img/sprite.svg#icon-phone" />
+            </svg>
+            <span class="contacts__txt">+7 (495) 000 52 52</span>
+          </a>
+        </address>
+        <button class="header__btn btn" type="button" data-open-modal="modal">Заказать звонок</button>
+      </div>
+    </header>
+
+    <!-- main -->
+    <main class="main">
+      <section class="main__hero hero" data-header-theme-class="header--base">
+        <div class="hero__background">
+          <picture>
+            <source srcset="./img/hero-bg-small.webp, ./img/hero-bg-small@2x.webp 2x" media="(max-width: 767px)">
+            <source srcset="./img/hero-bg-small.jpg, ./img/hero-bg-small@2x.jpg 2x" media="(max-width: 767px)">
+            <source srcset="./img/hero-bg-medium.webp, ./img/hero-bg-medium@2x.webp 2x" media="(max-width: 1023px)">
+            <source srcset="./img/hero-bg-medium.jpg, ./img/hero-bg-medium@2x.jpg 2x" media="(max-width: 1023px)">
+            <source srcset="./img/hero-bg-large.webp, ./img/hero-bg-large@2x.webp 2x" type="image/webp">
+            <img src="./img/hero-bg-large.jpg" srcset="./img/hero-bg-large@2x.jpg 2x" width="1920" height="880"
+              aria-hidden="true" alt="Электронная плата с сокетом, смд и навесными компонентами.">
+          </picture>
         </div>
-      </header>
 
-      <!-- main -->
-      <main class="main">
-        <section class="main__hero hero" data-header-theme-class="header--base">
-          <div class="hero__background">
-            <picture>
-              <source srcset="./img/hero-bg-small.webp, ./img/hero-bg-small@2x.webp 2x" media="(max-width: 767px)">
-              <source srcset="./img/hero-bg-small.jpg, ./img/hero-bg-small@2x.jpg 2x" media="(max-width: 767px)">
-              <source srcset="./img/hero-bg-medium.webp, ./img/hero-bg-medium@2x.webp 2x" media="(max-width: 1023px)">
-              <source srcset="./img/hero-bg-medium.jpg, ./img/hero-bg-medium@2x.jpg 2x" media="(max-width: 1023px)">
-              <source srcset="./img/hero-bg-large.webp, ./img/hero-bg-large@2x.webp 2x" type="image/webp">
-              <img
-                src="./img/hero-bg-large.jpg"
-                srcset="./img/hero-bg-large@2x.jpg 2x"
-                width="1920"
-                height="880"
-                aria-hidden="true"
-                alt="Электронная плата с сокетом, смд и навесными компонентами."
-              >
-            </picture>
+        <div class="hero__container container">
+          <h1>Печатные платы</h1>
+          <p>производство и&nbsp;монтаж, поставка комплектующих, <br>блоков и&nbsp;модулей</p>
+          <a class="hero__btn btn btn--add" href="#feedback">
+            <span class="hero__btn-big">Получить бесплатную консультацию</span>
+            <span class="hero__btn-small">Бесплатная консультация</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="main__features features container" data-header-theme-class="header--mod">
+        <h2 class="visually-hidden">Наши преимущества.</h2>
+        <ul class="features__list">
+          <li class="features__item">
+            <svg class="features__icon" width="35" height="35" fill="currentColor" aria-hidden="true">
+              <use href="./img/sprite.svg#icon-feature-stopwatch" />
+            </svg>
+            <p class="features__title title">Оперативные сроки</p>
+            <p class="features__txt">
+              Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить
+              и&nbsp;доставлять заказы плат и&nbsp;комплектующих в&nbsp;самые короткие сроки
+            </p>
+          </li>
+          <li class="features__item">
+            <svg class="features__icon" width="35" height="35" fill="currentColor" aria-hidden="true">
+              <use href="./img/sprite.svg#icon-feature-hired" />
+            </svg>
+            <p class="features__title title">Крупные поставщики</p>
+            <p class="features__txt">
+              Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND.
+              Сотрудничество с&nbsp;такими компаниями обеспечивает хорошее качество нашей продукции.
+            </p>
+          </li>
+          <li class="features__item">
+            <svg class="features__icon" width="35" height="35" fill="currentColor" aria-hidden="true">
+              <use href="./img/sprite.svg#icon-feature-detective" />
+            </svg>
+            <p class="features__title title">Полная конфиденциальность</p>
+            <p class="features__txt">
+              По&nbsp;желанию клиента мы&nbsp;обеспечиваем полную конфиденциальность.
+            </p>
+          </li>
+          <li class="features__item">
+            <svg class="features__icon" width="35" height="35" fill="currentColor" aria-hidden="true">
+              <use href="./img/sprite.svg#icon-feature-tag" />
+            </svg>
+            <p class="features__title title">Персонализация стоимости</p>
+            <p class="features__txt">
+              Мы&nbsp;подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту&nbsp;цену, которая
+              Вас устраивает.
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="main__about about container" id="about" data-header-theme-class="header--mod">
+        <div class="about__image-container">
+          <picture>
+            <source srcset="./img/about-image.webp, ./img/about-image@2x.webp 2x" type="image/webp">
+            <img src="./img/about-image.png" srcset="./img/about-image@2x.png 2x" aria-hidden="true" alt="">
+          </picture>
+        </div>
+        <div class="about__content">
+          <h2>О компании</h2>
+          <div class="about__spoiler spoiler" data-spoiler="container">
+            <p>
+              Мы&nbsp;поставляем электронные комплектующие, производим печатные платы и&nbsp;предоставляем мировые
+              технологии с&nbsp;1997&nbsp;года. Выполняем срочные заказы и&nbsp;пилотные образцы до&nbsp;10&nbsp;дней.
+            </p>
+            <p>
+              Наши поставщики&nbsp;&mdash; мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC,
+              REFOND. <br><br>Печатные платы и&nbsp;комплектующие Service Devices применяются на&nbsp;предприятиях
+              Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших
+              клиентов крупнейшие Производители светотехники России.
+            </p>
+            <p>
+              Smart Device&nbsp;&mdash; это команда профессионалов. Через нас прошло более
+              1&nbsp;000&nbsp;000&nbsp;клиентов, 70% из&nbsp;которых продолжают сотрудничество по&nbsp;сей день.
+              На&nbsp;данный момент насчитывается более 14&nbsp;офисов по&nbsp;всей стране и&nbsp;20&nbsp;городов
+              присутствия. Мы&nbsp;стремимся к&nbsp;постоянному развитию и&nbsp;повышению уровня качества продукции,
+              производимой внутри компании. Использование инновационных технологий помогает экономить деньги
+              и&nbsp;время наших клиентов
+            </p>
           </div>
+        </div>
+        <button class="about__btn btn spoiler-btn" type="button" data-spoiler="button">Подробнее</button>
+      </section>
 
-          <div class="hero__container container">
-            <h1>Печатные платы</h1>
-            <p>производство и&nbsp;монтаж, поставка комплектующих, <br>блоков и&nbsp;модулей</p>
-            <a class="hero__btn btn btn--add" href="#feedback">
-              <span class="hero__btn-big">Получить бесплатную консультацию</span>
-              <span class="hero__btn-small">Бесплатная консультация</span>
-            </a>
-          </div>
-        </section>
-
-        <section class="main__features features container" data-header-theme-class="header--mod">
-          <h2 class="visually-hidden">Наши преимущества.</h2>
-          <ul class="features__list">
-            <li class="features__item">
-              <svg class="features__icon" width="35" height="35" fill="currentColor" aria-hidden="true">
-                <use href="./img/sprite.svg#icon-feature-stopwatch"/>
-              </svg>
-              <p class="features__title title">Оперативные сроки</p>
-              <p class="features__txt">
-                Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и&nbsp;доставлять заказы плат и&nbsp;комплектующих в&nbsp;самые короткие сроки
-              </p>
+      <section class="main__services services" id="services" data-header-theme-class="header--mod">
+        <div class="services__container container">
+          <h2 class="services__title services__title--big  title">Smart Device предлагает следующие товары и услуги</h2>
+          <h2 class="services__title services__title--small  title">Товары и услуги<br>Smart Device</h2>
+          <ul class="services__list">
+            <li class="services__item">
+              <a class="services__link" href="#">
+                <picture>
+                  <source srcset="./img/product/product-1-small.webp, ./img/product/product-1-small@2x.webp 2x"
+                    media="(max-width: 767px)">
+                  <source srcset="./img/product/product-1-small.jpg, ./img/product/product-1-small@2x.jpg 2x"
+                    media="(max-width: 767px)">
+                  <source srcset="./img/product/product-1-medium.webp, ./img/product/product-1-medium@2x.webp 2x"
+                    media="(max-width: 1023px)">
+                  <source srcset="./img/product/product-1-medium.jpg, ./img/product/product-1-medium@2x.jpg 2x"
+                    media="(max-width: 1023px)">
+                  <source srcset="./img/product/product-1-large.webp, ./img/product/product-1-large@2x.webp 2x"
+                    type="image/webp">
+                  <img class="services__background" src="./img/product/product-1-large.jpg"
+                    srcset="./img/product/product-1-large@2x.jpg 2x" width="350" height="650"
+                    alt="Печатная c дросселем и смд-компонентами.">
+                </picture>
+                <p class="services__txt">Производство печатных плат</p>
+              </a>
             </li>
-            <li class="features__item">
-              <svg class="features__icon" width="35" height="35" fill="currentColor" aria-hidden="true">
-                <use href="./img/sprite.svg#icon-feature-hired"/>
-              </svg>
-              <p class="features__title title">Крупные поставщики</p>
-              <p class="features__txt">
-                Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с&nbsp;такими компаниями обеспечивает хорошее качество нашей продукции.
-              </p>
+            <li class="services__item">
+              <a class="services__link" href="#">
+                <picture>
+                  <source srcset="./img/product/product-2-small.webp, ./img/product/product-2-small@2x.webp 2x"
+                    media="(max-width: 767px)">
+                  <source srcset="./img/product/product-2-small.jpg, ./img/product/product-2-small@2x.jpg 2x"
+                    media="(max-width: 767px)">
+                  <source srcset="./img/product/product-2-medium.webp, ./img/product/product-2-medium@2x.webp 2x"
+                    media="(max-width: 1023px)">
+                  <source srcset="./img/product/product-2-medium.jpg, ./img/product/product-2-medium@2x.jpg 2x"
+                    media="(max-width: 1023px)">
+                  <source srcset="./img/product/product-2-large.webp, ./img/product/product-2-large@2x.webp 2x"
+                    type="image/webp">
+                  <img class="services__background" src="./img/product/product-2-large.jpg"
+                    srcset="./img/product/product-2-large@2x.jpg 2x" width="350" height="650"
+                    alt="Печатная плата с электролитическими конденсаторами и процессорным сокетом.">
+                </picture>
+                <p class="services__txt">Монтаж печатных плат</p>
+              </a>
             </li>
-            <li class="features__item">
-              <svg class="features__icon" width="35" height="35" fill="currentColor" aria-hidden="true">
-                <use href="./img/sprite.svg#icon-feature-detective"/>
-              </svg>
-              <p class="features__title title">Полная конфиденциальность</p>
-              <p class="features__txt">
-                По&nbsp;желанию клиента мы&nbsp;обеспечиваем полную конфиденциальность.
-              </p>
-            </li>
-            <li class="features__item">
-              <svg class="features__icon" width="35" height="35" fill="currentColor" aria-hidden="true">
-                <use href="./img/sprite.svg#icon-feature-tag"/>
-              </svg>
-              <p class="features__title title">Персонализация стоимости</p>
-              <p class="features__txt">
-                Мы&nbsp;подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту&nbsp;цену, которая Вас устраивает.
-              </p>
+            <li class="services__item">
+              <a class="services__link" href="#">
+                <picture>
+                  <source srcset="./img/product/product-3-small.webp, ./img/product/product-3-small@2x.webp 2x"
+                    media="(max-width: 767px)">
+                  <source srcset="./img/product/product-3-small.jpg, ./img/product/product-3-small@2x.jpg 2x"
+                    media="(max-width: 767px)">
+                  <source srcset="./img/product/product-3-medium.webp, ./img/product/product-3-medium@2x.webp 2x"
+                    media="(max-width: 1023px)">
+                  <source srcset="./img/product/product-3-medium.jpg, ./img/product/product-3-medium@2x.jpg 2x"
+                    media="(max-width: 1023px)">
+                  <source srcset="./img/product/product-3-large.webp, ./img/product/product-3-large@2x.webp 2x"
+                    type="image/webp">
+                  <img class="services__background" src="./img/product/product-3-large.jpg"
+                    srcset="./img/product/product-3-large@2x.jpg 2x" width="350" height="650"
+                    alt="Плата драйвера для светодиодного светильника.">
+                </picture>
+                <p class="services__txt">Комплектующие для светотехники</p>
+              </a>
             </li>
           </ul>
-        </section>
+        </div>
+      </section>
 
-        <section class="main__about about container" id="about" data-header-theme-class="header--mod">
-          <div class="about__image-container">
+      <section class="main__feedback feedback" id="feedback" data-header-theme-class="header--mod">
+        <div class="feedback__container container">
+          <div class="feedback__background-wrapper">
             <picture>
-              <source srcset="./img/about-image.webp, ./img/about-image@2x.webp 2x" type="image/webp">
-              <img src="./img/about-image.png" srcset="./img/about-image@2x.png 2x" aria-hidden="true" alt="">
+              <source media="(max-width: 1023px)"
+                srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==">
+              <source srcset="./img/feedback-bg-large.webp, ./img/feedback-bg-large@2x.webp 2x" type="image/webp">
+              <img class="feedback__background" src="./img/feedback-bg-large.png"
+                srcset="./img/feedback-bg-large@2x.png 2x" width="510" height="285" aria-hidden="true"
+                alt="Изображение бумажного самолётика.">
             </picture>
           </div>
-          <div class="about__content">
-            <h2>О компании</h2>
-            <div class="about__spoiler spoiler" data-spoiler="container">
-              <p>
-                Мы&nbsp;поставляем электронные комплектующие, производим печатные платы и&nbsp;предоставляем мировые технологии с&nbsp;1997&nbsp;года. Выполняем срочные заказы и&nbsp;пилотные образцы до&nbsp;10&nbsp;дней.
-              </p>
-              <p>
-                Наши поставщики&nbsp;&mdash; мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. <br><br>Печатные платы и&nbsp;комплектующие Service Devices применяются на&nbsp;предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.
-              </p>
-              <p>
-                Smart Device&nbsp;&mdash; это команда профессионалов. Через нас прошло более 1&nbsp;000&nbsp;000&nbsp;клиентов, 70% из&nbsp;которых продолжают сотрудничество по&nbsp;сей день. На&nbsp;данный момент насчитывается более 14&nbsp;офисов по&nbsp;всей стране и&nbsp;20&nbsp;городов присутствия. Мы&nbsp;стремимся к&nbsp;постоянному развитию и&nbsp;повышению уровня качества продукции, производимой внутри компании. Использование инновационных технологий помогает экономить деньги и&nbsp;время наших клиентов
-              </p>
-            </div>
-          </div>
-          <button class="about__btn btn spoiler-btn" type="button" data-spoiler="button">Подробнее</button>
-        </section>
+          <div class="feedback__wrapper">
+            <h2>Остались вопросы? Задайте их нам!</h2>
+            <p>Мы проконсультируем Вас бесплатно</p>
 
-        <section class="main__services services" id="services" data-header-theme-class="header--mod">
-          <div class="services__container container">
-            <h2 class="services__title services__title--big  title">Smart Device предлагает следующие товары и услуги</h2>
-            <h2 class="services__title services__title--small  title">Товары и услуги<br>Smart Device</h2>
-            <ul class="services__list">
-              <li class="services__item">
-                <a class="services__link" href="#">
-                  <picture>
-                    <source srcset="./img/product/product-1-small.webp, ./img/product/product-1-small@2x.webp 2x" media="(max-width: 767px)">
-                    <source srcset="./img/product/product-1-small.jpg, ./img/product/product-1-small@2x.jpg 2x" media="(max-width: 767px)">
-                    <source srcset="./img/product/product-1-medium.webp, ./img/product/product-1-medium@2x.webp 2x" media="(max-width: 1023px)">
-                    <source srcset="./img/product/product-1-medium.jpg, ./img/product/product-1-medium@2x.jpg 2x" media="(max-width: 1023px)">
-                    <source srcset="./img/product/product-1-large.webp, ./img/product/product-1-large@2x.webp 2x" type="image/webp">
-                    <img class="services__background" src="./img/product/product-1-large.jpg" srcset="./img/product/product-1-large@2x.jpg 2x" width="350" height="650" alt="Печатная c дросселем и смд-компонентами.">
-                  </picture>
-                  <p class="services__txt">Производство печатных плат</p>
-                </a>
-              </li>
-              <li class="services__item">
-                <a class="services__link" href="#">
-                  <picture>
-                    <source srcset="./img/product/product-2-small.webp, ./img/product/product-2-small@2x.webp 2x" media="(max-width: 767px)">
-                    <source srcset="./img/product/product-2-small.jpg, ./img/product/product-2-small@2x.jpg 2x" media="(max-width: 767px)">
-                    <source srcset="./img/product/product-2-medium.webp, ./img/product/product-2-medium@2x.webp 2x" media="(max-width: 1023px)">
-                    <source srcset="./img/product/product-2-medium.jpg, ./img/product/product-2-medium@2x.jpg 2x" media="(max-width: 1023px)">
-                    <source srcset="./img/product/product-2-large.webp, ./img/product/product-2-large@2x.webp 2x" type="image/webp">
-                    <img class="services__background" src="./img/product/product-2-large.jpg" srcset="./img/product/product-2-large@2x.jpg 2x" width="350" height="650" alt="Печатная плата с электролитическими конденсаторами и процессорным сокетом.">
-                  </picture>
-                  <p class="services__txt">Монтаж печатных плат</p>
-                </a>
-              </li>
-              <li class="services__item">
-                <a class="services__link" href="#">
-                  <picture>
-                    <source srcset="./img/product/product-3-small.webp, ./img/product/product-3-small@2x.webp 2x" media="(max-width: 767px)">
-                    <source srcset="./img/product/product-3-small.jpg, ./img/product/product-3-small@2x.jpg 2x" media="(max-width: 767px)">
-                    <source srcset="./img/product/product-3-medium.webp, ./img/product/product-3-medium@2x.webp 2x" media="(max-width: 1023px)">
-                    <source srcset="./img/product/product-3-medium.jpg, ./img/product/product-3-medium@2x.jpg 2x" media="(max-width: 1023px)">
-                    <source srcset="./img/product/product-3-large.webp, ./img/product/product-3-large@2x.webp 2x" type="image/webp">
-                    <img class="services__background" src="./img/product/product-3-large.jpg" srcset="./img/product/product-3-large@2x.jpg 2x" width="350" height="650" alt="Плата драйвера для светодиодного светильника.">
-                  </picture>
-                  <p class="services__txt">Комплектующие для светотехники</p>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </section>
-
-        <section class="main__feedback feedback" id="feedback" data-header-theme-class="header--mod">
-          <div class="feedback__container container">
-            <div class="feedback__background-wrapper">
-              <picture>
-                <source media="(max-width: 1023px)" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==">
-                <source srcset="./img/feedback-bg-large.webp, ./img/feedback-bg-large@2x.webp 2x" type="image/webp">
-                <img class="feedback__background" src="./img/feedback-bg-large.png" srcset="./img/feedback-bg-large@2x.png 2x" width="510" height="285" aria-hidden="true" alt="Изображение бумажного самолётика.">
-              </picture>
-            </div>
-            <div class="feedback__wrapper">
-              <h2>Остались вопросы? Задайте их нам!</h2>
-              <p>Мы проконсультируем Вас бесплатно</p>
-
-              <!-- feedback form start -->
-              <div class="feedback__form feedback-form" data-form-validate data-callback="base">
-                <form action="https://echo.htmlacademy.ru/" method="post">
-                  <div class="feedback-form__input-wrapper">
-                    <div class="feedback-form__validation" data-validate-type="text" data-limitation="letters" data-required>
-                      <label class="visually-hidden" for="name--modal">Ваше имя:</label>
-                      <input type="text" name="name--modal" id="name--modal" spellcheck="false" placeholder="Имя" required pattern="[A-Za-z]{1,50}" aria-invalid="true">
-                    </div>
-                    <div class="feedback-form__validation" data-validate-type="phone" data-required>
-                      <label class="visually-hidden" for="phone--modal">Ваш контактный телефон:</label>
-                      <input type="tel" name="phone--modal" id="phone--modal" placeholder="Телефон" required aria-invalid="true">
-                    </div>
-                    <label class="visually-hidden" for="text--modal">Ваш вопрос:</label>
-                    <textarea name="text--modal" id="text--modal" placeholder="Ваш вопрос"></textarea>
+            <!-- feedback form start -->
+            <div class="feedback__form feedback-form" data-form-validate data-callback="base">
+              <form action="https://echo.htmlacademy.ru/" method="post">
+                <div class="feedback-form__input-wrapper">
+                  <div class="feedback-form__validation" data-validate-type="text" data-limitation="letters"
+                    data-required>
+                    <label class="visually-hidden" for="name--modal">Ваше имя:</label>
+                    <input type="text" name="name--modal" id="name--modal" spellcheck="false" placeholder="Имя" required
+                      pattern="[A-Za-z]{1,50}" aria-invalid="true">
                   </div>
-                  <div class="feedback-form__btn-wrapper">
-                    <div class="feedback-form__validation" data-validate-type="checkbox" data-required>
-                      <label for="agreement--modal">
-                        <input class="visually-hidden" type="checkbox" name="agreement--modal" id="agreement--modal" required aria-invalid="true">
-                        <span></span>
-                        <span>Я согласен на&nbsp;обработку <br>персональных данных</span>
-                      </label>
-                    </div>
-                    <button class="feedback-form__btn btn" type="submit">Задать вопрос</button>
+                  <div class="feedback-form__validation" data-validate-type="phone" data-required>
+                    <label class="visually-hidden" for="phone--modal">Ваш контактный телефон:</label>
+                    <input type="tel" name="phone--modal" id="phone--modal" placeholder="Телефон" required
+                      aria-invalid="true">
                   </div>
-                </form>
-              </div>
-              <!-- feedback form end -->
-
+                  <label class="visually-hidden" for="text--modal">Ваш вопрос:</label>
+                  <textarea name="text--modal" id="text--modal" placeholder="Ваш вопрос"></textarea>
+                </div>
+                <div class="feedback-form__btn-wrapper">
+                  <div class="feedback-form__validation" data-validate-type="checkbox" data-required>
+                    <label for="agreement--modal">
+                      <input class="visually-hidden" type="checkbox" name="agreement--modal" id="agreement--modal"
+                        required aria-invalid="true">
+                      <span></span>
+                      <span>Я согласен на&nbsp;обработку <br>персональных данных</span>
+                    </label>
+                  </div>
+                  <button class="feedback-form__btn btn" type="submit">Задать вопрос</button>
+                </div>
+              </form>
             </div>
+            <!-- feedback form end -->
+
           </div>
-        </section>
-
-      </main>
-
-      <!-- footer -->
-      <footer class="footer" data-header-theme-class="header--base">
-        <div class="footer__container container">
-
-          <div class="footer__logo-wrapper">
-            <a class="footer__logo logo" href="./index.html">
-                <img
-                  class="logo__image"
-                  src="./img/svg/logo-large.svg"
-                  width="215"
-                  height="55"
-                  alt="Логотип Smart Device."
-                >
-            </a>
-            <ul class="footer__social-list social-list">
-              <li class="social-list__item">
-                <a class="social-list__link" href="#" aria-label="Мы в Одноклассниках.">
-                  <svg class="social-list__icon" width="30" height="30" fill="currentColor" aria-hidden="true" focusable="false">
-                    <use href="./img/sprite.svg#icon-social-ok" />
-                  </svg>
-                </a>
-              </li>
-              <li class="social-list__item">
-                <a class="social-list__link" href="#" aria-label="Мы во Вконтакте.">
-                  <svg class="social-list__icon" width="30" height="30" fill="currentColor" aria-hidden="true" focusable="false">
-                    <use href="./img/sprite.svg#icon-social-vk" />
-                  </svg>
-                </a>
-              </li>
-              <li class="social-list__item">
-                <a class="social-list__link" href="#" aria-label="Мы на Пинтерест.">
-                  <svg class="social-list__icon" width="30" height="30" fill="currentColor" aria-hidden="true" focusable="false">
-                    <use href="./img/sprite.svg#icon-social-pinterest" />
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="footer__accordion" data-accordion="parent" data-single="" data-destroy="(max-width: 767px)">
-            <section class="footer__column" data-accordion="element">
-              <h2 class="footer__title title" data-accordion="button">Разделы сайта</h2>
-              <nav class="footer__nav" data-accordion="content">
-                <ul class="footer__list footer-list">
-                  <li class="footer-list__item">
-                    <a class="footer-list__link" href="#about">О Компании</a>
-                  </li>
-                  <li class="footer-list__item">
-                    <a class="footer-list__link" href="#services">Продукты</a>
-                  </li>
-                  <li class="footer-list__item">
-                    <a class="footer-list__link" href="#">Производство печатных плат</a>
-                  </li>
-                  <li class="footer-list__item">
-                    <a class="footer-list__link" href="#">Монтаж печатных плат</a>
-                  </li>
-                  <li class="footer-list__item">
-                    <a class="footer-list__link" href="#">Комплектующие</a>
-                  </li>
-                  <li class="footer-list__item">
-                    <a class="footer-list__link" href="#">Доставка</a>
-                  </li>
-                  <li class="footer-list__item">
-                    <a class="footer-list__link" href="https://clck.ru/3vyXS" target="_blank">Контакты</a>
-                  </li>
-                </ul>
-              </nav>
-            </section>
-            <section class="footer__column" data-accordion="element">
-              <h2 class="footer__title title" data-accordion="button">Наш офис</h2>
-              <address class="footer__address footer-list footer-list--add" data-accordion="content">
-                <p class="footer-list__item">
-                  г. Мытищи, Олимпийский проспект, д.10
-                </p>
-                <a class="footer-list__item footer-list__link" href="tel:+74955894050">+7 (495) 589-40-50</a>
-                <a class="footer-list__item footer-list__link" href="tel:+79253895829">+7 (925) 389-58-29</a>
-                <a class="footer-list__item footer-list__link" href="tel:+79253647813">+7 (925) 364-78-13</a>
-              </address>
-            </section>
-          </div>
-
         </div>
-      </footer>
+      </section>
 
-    </div>
+    </main>
 
-    <!-- модальное окно -->
-    <div class="modal" data-modal="modal" role="dialog">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <section class="modal__content">
-          <button class="modal__close" type="button" aria-label="Закрыть модальное окно." data-close-modal></button>
-          <h2>Закажите звонок</h2>
-          <p>
-            Оставьте контакты, мы&nbsp;проконсультируем  <br>вас бесплатно в&nbsp;удобное время
-          </p>
-          <!-- feedback form start -->
-          <div class="modal__form feedback-form" data-form-validate data-callback="base">
-            <form action="https://echo.htmlacademy.ru/" method="post">
-              <div class="feedback-form__input-wrapper feedback-form__input-wrapper--modal">
-                <div class="feedback-form__validation" data-validate-type="text" data-limitation="letters" data-required>
-                  <label class="visually-hidden" for="name">Ваше имя:</label>
-                  <input type="text" name="name" id="name" spellcheck="false" placeholder="Имя" required pattern="[A-Za-z]{1,50}" aria-invalid="true" data-focus>
-                </div>
-                <div class="feedback-form__validation" data-validate-type="phone" data-required>
-                  <label class="visually-hidden" for="phone">Ваш контактный телефон:</label>
-                  <input type="tel" name="phone" id="phone" placeholder="Телефон" required aria-invalid="true">
-                </div>
-                <label class="visually-hidden" for="text">Ваш вопрос:</label>
-                <textarea name="text" id="text" placeholder="Ваш вопрос"></textarea>
-              </div>
-              <div class="feedback-form__btn-wrapper feedback-form__btn-wrapper--modal">
-                <div class="feedback-form__validation" data-validate-type="checkbox" data-required>
-                  <label for="agreement">
-                    <input class="visually-hidden" type="checkbox" name="agreement" id="agreement" required aria-invalid="true">
-                    <span></span>
-                    <span>Я согласен на&nbsp;обработку <br>персональных данных</span>
-                  </label>
-                </div>
-                <button class="feedback-form__btn btn" type="submit">Отправить</button>
-              </div>
-            </form>
-          </div>
-          <!-- feedback form end -->
-        </section>
+    <!-- footer -->
+    <footer class="footer" data-header-theme-class="header--base">
+      <div class="footer__container container">
+
+        <div class="footer__logo-wrapper">
+          <a class="footer__logo logo" href="./index.html">
+            <img class="logo__image" src="./img/svg/logo-large.svg" width="215" height="55" alt="Логотип Smart Device.">
+          </a>
+          <ul class="footer__social-list social-list">
+            <li class="social-list__item">
+              <a class="social-list__link" href="#" aria-label="Мы в Одноклассниках.">
+                <svg class="social-list__icon" width="30" height="30" fill="currentColor" aria-hidden="true"
+                  focusable="false">
+                  <use href="./img/sprite.svg#icon-social-ok" />
+                </svg>
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a class="social-list__link" href="#" aria-label="Мы во Вконтакте.">
+                <svg class="social-list__icon" width="30" height="30" fill="currentColor" aria-hidden="true"
+                  focusable="false">
+                  <use href="./img/sprite.svg#icon-social-vk" />
+                </svg>
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a class="social-list__link" href="#" aria-label="Мы на Пинтерест.">
+                <svg class="social-list__icon" width="30" height="30" fill="currentColor" aria-hidden="true"
+                  focusable="false">
+                  <use href="./img/sprite.svg#icon-social-pinterest" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__accordion" data-accordion="parent" data-single="" data-destroy="(max-width: 767px)">
+          <section class="footer__column" data-accordion="element">
+            <h2 class="footer__title title" data-accordion="button">Разделы сайта</h2>
+            <nav class="footer__nav" data-accordion="content">
+              <ul class="footer__list footer-list">
+                <li class="footer-list__item">
+                  <a class="footer-list__link" href="#about">О Компании</a>
+                </li>
+                <li class="footer-list__item">
+                  <a class="footer-list__link" href="#services">Продукты</a>
+                </li>
+                <li class="footer-list__item">
+                  <a class="footer-list__link" href="#">Производство печатных плат</a>
+                </li>
+                <li class="footer-list__item">
+                  <a class="footer-list__link" href="#">Монтаж печатных плат</a>
+                </li>
+                <li class="footer-list__item">
+                  <a class="footer-list__link" href="#">Комплектующие</a>
+                </li>
+                <li class="footer-list__item">
+                  <a class="footer-list__link" href="#">Доставка</a>
+                </li>
+                <li class="footer-list__item">
+                  <a class="footer-list__link" href="https://clck.ru/3vyXS" target="_blank">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+          </section>
+          <section class="footer__column" data-accordion="element">
+            <h2 class="footer__title title" data-accordion="button">Наш офис</h2>
+            <address class="footer__address footer-list footer-list--add" data-accordion="content">
+              <p class="footer-list__item">
+                г. Мытищи, Олимпийский проспект, д.10
+              </p>
+              <a class="footer-list__item footer-list__link" href="tel:+74955894050">+7 (495) 589-40-50</a>
+              <a class="footer-list__item footer-list__link" href="tel:+79253895829">+7 (925) 389-58-29</a>
+              <a class="footer-list__item footer-list__link" href="tel:+79253647813">+7 (925) 364-78-13</a>
+            </address>
+          </section>
+        </div>
+
       </div>
-    </div>
+    </footer>
 
-    <script src="js/main.min.js" type="module"></script>
-  </body>
+  </div>
+
+  <!-- модальное окно -->
+  <div class="modal" data-modal="modal" role="dialog">
+    <div class="modal__wrapper">
+      <div class="modal__overlay" data-close-modal></div>
+      <section class="modal__content">
+        <button class="modal__close" type="button" aria-label="Закрыть модальное окно." data-close-modal></button>
+        <h2>Закажите звонок</h2>
+        <p>
+          Оставьте контакты, мы&nbsp;проконсультируем <br>вас бесплатно в&nbsp;удобное время
+        </p>
+        <!-- feedback form start -->
+        <div class="modal__form feedback-form" data-form-validate data-callback="base">
+          <form action="https://echo.htmlacademy.ru/" method="post">
+            <div class="feedback-form__input-wrapper feedback-form__input-wrapper--modal">
+              <div class="feedback-form__validation" data-validate-type="text" data-limitation="letters" data-required>
+                <label class="visually-hidden" for="name">Ваше имя:</label>
+                <input type="text" name="name" id="name" spellcheck="false" placeholder="Имя" required
+                  pattern="[A-Za-z]{1,50}" aria-invalid="true" data-focus>
+              </div>
+              <div class="feedback-form__validation" data-validate-type="phone" data-required>
+                <label class="visually-hidden" for="phone">Ваш контактный телефон:</label>
+                <input type="tel" name="phone" id="phone" placeholder="Телефон" required aria-invalid="true">
+              </div>
+              <label class="visually-hidden" for="text">Ваш вопрос:</label>
+              <textarea name="text" id="text" placeholder="Ваш вопрос"></textarea>
+            </div>
+            <div class="feedback-form__btn-wrapper feedback-form__btn-wrapper--modal">
+              <div class="feedback-form__validation" data-validate-type="checkbox" data-required>
+                <label for="agreement">
+                  <input class="visually-hidden" type="checkbox" name="agreement" id="agreement" required
+                    aria-invalid="true">
+                  <span></span>
+                  <span>Я согласен на&nbsp;обработку <br>персональных данных</span>
+                </label>
+              </div>
+              <button class="feedback-form__btn btn" type="submit">Отправить</button>
+            </div>
+          </form>
+        </div>
+        <!-- feedback form end -->
+      </section>
+    </div>
+  </div>
+
+  <script src="js/main.min.js" type="module"></script>
+</body>
+
 </html>
