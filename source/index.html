@@ -75,7 +75,7 @@
             <source srcset="./img/hero-bg-medium.jpg, ./img/hero-bg-medium@2x.jpg 2x" media="(max-width: 1023px)">
             <source srcset="./img/hero-bg-large.webp, ./img/hero-bg-large@2x.webp 2x" type="image/webp">
             <img src="./img/hero-bg-large.jpg" srcset="./img/hero-bg-large@2x.jpg 2x" width="1920" height="880"
-              aria-hidden="true" alt="Электронная плата с сокетом, смд и навесными компонентами.">
+              fetchpriority="high" aria-hidden="true" alt="Электронная плата с сокетом, смд и навесными компонентами.">
           </picture>
         </div>
 
@@ -138,7 +138,8 @@
         <div class="about__image-container">
           <picture>
             <source srcset="./img/about-image.webp, ./img/about-image@2x.webp 2x" type="image/webp">
-            <img src="./img/about-image.png" srcset="./img/about-image@2x.png 2x" aria-hidden="true" width="150" height="320" alt="">
+            <img src="./img/about-image.png" srcset="./img/about-image@2x.png 2x" aria-hidden="true" width="150"
+              height="320" alt="">
           </picture>
         </div>
         <div class="about__content">
@@ -187,8 +188,7 @@
                     type="image/webp">
                   <img class="services__background" src="./img/product/product-1-large.jpg"
                     srcset="./img/product/product-1-large@2x.jpg 2x" width="350" height="650"
-                    alt="Печатная c дросселем и смд-компонентами."
-                    loading="lazy">
+                    alt="Печатная c дросселем и смд-компонентами." loading="lazy">
                 </picture>
                 <p class="services__txt">Производство печатных плат</p>
               </a>
@@ -208,8 +208,7 @@
                     type="image/webp">
                   <img class="services__background" src="./img/product/product-2-large.jpg"
                     srcset="./img/product/product-2-large@2x.jpg 2x" width="350" height="650"
-                    alt="Печатная плата с электролитическими конденсаторами и процессорным сокетом."
-                    loading="lazy">
+                    alt="Печатная плата с электролитическими конденсаторами и процессорным сокетом." loading="lazy">
                 </picture>
                 <p class="services__txt">Монтаж печатных плат</p>
               </a>
@@ -229,8 +228,7 @@
                     type="image/webp">
                   <img class="services__background" src="./img/product/product-3-large.jpg"
                     srcset="./img/product/product-3-large@2x.jpg 2x" width="350" height="650"
-                    alt="Плата драйвера для светодиодного светильника."
-                    loading="lazy">
+                    alt="Плата драйвера для светодиодного светильника." loading="lazy">
                 </picture>
                 <p class="services__txt">Комплектующие для светотехники</p>
               </a>
@@ -267,8 +265,7 @@
                   </div>
                   <div class="feedback-form__validation" data-validate-type="phone" data-required>
                     <label class="visually-hidden" for="phone">Ваш контактный телефон:</label>
-                    <input type="tel" name="phone" id="phone" placeholder="Телефон" required
-                      aria-invalid="true">
+                    <input type="tel" name="phone" id="phone" placeholder="Телефон" required aria-invalid="true">
                   </div>
                   <label class="visually-hidden" for="text">Ваш вопрос:</label>
                   <textarea name="text" id="text" placeholder="Ваш вопрос"></textarea>
@@ -276,8 +273,8 @@
                 <div class="feedback-form__btn-wrapper">
                   <div class="feedback-form__validation" data-validate-type="checkbox" data-required>
                     <label for="agreement">
-                      <input class="visually-hidden" type="checkbox" name="agreement" id="agreement"
-                        required aria-invalid="true">
+                      <input class="visually-hidden" type="checkbox" name="agreement" id="agreement" required
+                        aria-invalid="true">
                       <span></span>
                       <span>Я согласен на&nbsp;обработку <br>персональных данных</span>
                     </label>
