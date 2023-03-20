@@ -959,6 +959,7 @@ button,
   height: auto;
   -o-object-fit: contain;
   object-fit: contain;
+  color: #ffffff;
   -webkit-transition: opacity 0.2s ease-out;
   -o-transition: opacity 0.2s ease-out;
   transition: opacity 0.2s ease-out;
