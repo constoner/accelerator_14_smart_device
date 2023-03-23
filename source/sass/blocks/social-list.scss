@@ -1,14 +1,22 @@
 .social-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: fit-content;
   padding: 0;
   list-style-type: none;
+
+  @include vp-1023 {
+    justify-content: flex-end;
+  }
+
+  @include vp-767 {
+    justify-content: center;
+  }
 }
 
-.social-list__item + .social-list__item {
-  margin-left: 15px;
+.social-list__item {
+  margin: 0 7.5px 5px;
 }
 
 .social-list__link {
