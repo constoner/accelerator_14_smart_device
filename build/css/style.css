@@ -744,9 +744,9 @@ button,
   -ms-grid-columns: auto 495px auto;
   grid-template-columns: auto 495px auto;
   gap: 10px 10px;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
 }
 
 .header__logo {
@@ -764,6 +764,7 @@ button,
   -ms-grid-column-align: stretch;
   justify-self: stretch;
   max-width: 100%;
+  margin-top: 5px;
   margin-bottom: 7px;
   margin-left: 15px;
 }
@@ -776,6 +777,7 @@ button,
   justify-self: end;
   min-width: 160px;
   min-height: 40px;
+  margin-top: 5px;
   margin-right: 60px;
   margin-bottom: 5px;
   padding: 10px 15px;
@@ -1992,6 +1994,7 @@ button,
   }
 
   .header__contacts {
+    margin-top: 0;
     margin-left: 0;
     margin-right: 20px;
   }
@@ -2271,6 +2274,7 @@ button,
 
   .header__logo {
     width: 35px;
+    margin-top: 5px;
   }
 
   .header__contacts {
