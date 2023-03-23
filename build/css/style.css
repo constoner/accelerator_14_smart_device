@@ -1190,6 +1190,9 @@ button,
 
 .footer-list__link {
   display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   font-style: normal;
   color: inherit;
   -webkit-transition: opacity 0.2s ease-out;

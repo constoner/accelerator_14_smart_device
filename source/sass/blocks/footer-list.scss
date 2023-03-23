@@ -86,6 +86,7 @@
 
 .footer-list__link {
   display: block;
+  width: fit-content;
   font-style: normal;
   color: inherit;
   transition: opacity $trans-default;
