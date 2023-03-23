@@ -4410,6 +4410,12 @@ button,
     margin-bottom: 25px;
   }
 
+  .feedback-form__btn-wrapper .feedback-form__validation {
+    -ms-flex-item-align: start;
+    -ms-grid-row-align: start;
+    align-self: start;
+  }
+
   .feedback-form__btn-wrapper label {
     margin-left: 5px;
     margin-bottom: 0;

@@ -143,6 +143,10 @@
 
 .feedback-form__btn-wrapper .feedback-form__validation {
   order: 1;
+
+  @include vp-767 {
+    align-self: start;
+  }
 }
 
 .feedback-form__btn-wrapper label {
