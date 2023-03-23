@@ -15,8 +15,7 @@
   visibility: hidden;
   opacity: 0;
 
-  transition: opacity $trans-modal,
-    visibility $trans-modal;
+  transition: opacity $trans-modal, visibility $trans-modal;
 
   pointer-events: none;
 
@@ -186,6 +185,6 @@
   }
 
   &.is-active &__content {
-   transform: scale(1);
+    transform: scale(1);
   }
 }
