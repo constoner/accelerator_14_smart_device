@@ -1,9 +1,9 @@
 .modal {
   position: fixed;
-  top: -1000%;
-  right: -1000%;
-  bottom: -1000%;
-  left: -1000%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   z-index: 1000;
 
   display: flex;
@@ -12,12 +12,10 @@
   -webkit-overflow-scrolling: touch;
 
   background-color: rgba($color-black-pearl, 0.7);
-  transform: scale(0);
   visibility: hidden;
   opacity: 0;
 
   transition: opacity $trans-modal,
-    transform $trans-modal,
     visibility $trans-modal;
 
   pointer-events: none;
@@ -103,13 +101,15 @@
 
   &__content {
     position: relative;
-    top: 51px;
+    top: 31px;
     left: -8px;
     width: 500px;
     padding: 40px;
     color: $color-default-white;
     background-color: $color-deep-sky-blue;
     border-radius: 3px;
+    transform: scale(0);
+    transition: transform $trans-default;
 
     @include vp-767 {
       width: 100%;
@@ -179,10 +179,13 @@
   }
 
   &.is-active {
-    transform: scale(1);
     visibility: visible;
     opacity: 1;
 
     pointer-events: auto;
+  }
+
+  &.is-active &__content {
+   transform: scale(1);
   }
 }

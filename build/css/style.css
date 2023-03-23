@@ -776,10 +776,10 @@ button,
 
 .modal {
   position: fixed;
-  top: -1000%;
-  right: -1000%;
-  bottom: -1000%;
-  left: -1000%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   z-index: 1000;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -791,16 +791,11 @@ button,
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   background-color: rgba(4, 24, 39, 0.7);
-  -webkit-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
   visibility: hidden;
   opacity: 0;
-  -webkit-transition: opacity 0.3s ease-out, visibility 0.3s ease-out, -webkit-transform 0.3s ease-out;
-  transition: opacity 0.3s ease-out, visibility 0.3s ease-out, -webkit-transform 0.3s ease-out;
-  -o-transition: opacity 0.3s ease-out, transform 0.3s ease-out, visibility 0.3s ease-out;
-  transition: opacity 0.3s ease-out, transform 0.3s ease-out, visibility 0.3s ease-out;
-  transition: opacity 0.3s ease-out, transform 0.3s ease-out, visibility 0.3s ease-out, -webkit-transform 0.3s ease-out;
+  -webkit-transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
+  -o-transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
+  transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
   pointer-events: none;
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -886,13 +881,21 @@ button,
 
 .modal__content {
   position: relative;
-  top: 51px;
+  top: 31px;
   left: -8px;
   width: 500px;
   padding: 40px;
   color: #ffffff;
   background-color: #00b2ff;
   border-radius: 3px;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: -webkit-transform 0.2s ease-out;
+  transition: -webkit-transform 0.2s ease-out;
+  -o-transition: transform 0.2s ease-out;
+  transition: transform 0.2s ease-out;
+  transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
 }
 
 .modal__content h2 {
@@ -933,12 +936,15 @@ button,
 }
 
 .modal.is-active {
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
   visibility: visible;
   opacity: 1;
   pointer-events: auto;
+}
+
+.modal.is-active .modal__content {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
 }
 
 .logo {
