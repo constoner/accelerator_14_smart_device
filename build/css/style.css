@@ -1960,7 +1960,7 @@ button,
 
 @media (max-width: 1023px) {
   .container {
-    max-width: 770px;
+    max-width: unset;
     padding: 0 50px;
   }
 
