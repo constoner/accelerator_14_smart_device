@@ -23,21 +23,6 @@
     padding-top: 10px;
     padding-bottom: 20px;
   }
-
-  &--base {
-    background-image: $top-to-bottom-header;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-
-  &--mod {
-    background-image: linear-gradient(
-      180deg,
-      #026693 84.9%,
-      rgba(#026693, $alpha: 0) 100%
-    );
-  }
 }
 
 .header__container {

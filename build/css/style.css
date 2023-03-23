@@ -723,21 +723,6 @@ button,
   background-size: cover;
 }
 
-.header--base {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(84.9%, #041827), to(rgba(4, 24, 39, 0)));
-  background-image: -o-linear-gradient(top, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
-  background-image: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-.header--mod {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(84.9%, #026693), to(rgba(2, 102, 147, 0)));
-  background-image: -o-linear-gradient(top, #026693 84.9%, rgba(2, 102, 147, 0) 100%);
-  background-image: linear-gradient(180deg, #026693 84.9%, rgba(2, 102, 147, 0) 100%);
-}
-
 .header__container {
   display: -ms-grid;
   display: grid;

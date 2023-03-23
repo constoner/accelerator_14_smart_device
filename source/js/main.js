@@ -1,6 +1,5 @@
 import './utils/ios-checker';
 import {iosVhFix} from './utils/ios-vh-fix';
-import {StickyHeader} from './modules/sticky-header/sticky-header';
 import './utils/focus-visible-polyfill';
 import './utils/focus-lock';
 import './utils/scroll-lock';
@@ -29,9 +28,6 @@ window.addEventListener('DOMContentLoaded', () => {
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
-    const stickyHeader = new StickyHeader();
-    stickyHeader.init();
-
     initModals();
     const form = new Form();
     window.form = form;
