@@ -1,0 +1,31 @@
+.footer-menu {
+  margin: 0;
+  padding: 0;
+  column-count: 2;
+  column-gap: 30px;
+  list-style-type: none;
+
+  &::after {
+    display: list-item;
+    width: 100%;
+    height: 20.5px;
+    content: "";
+  }
+
+  @include vp-1023 {
+    column-count: unset;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.footer-menu__item {
+  margin-bottom: 10px;
+  break-inside: avoid-column;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
