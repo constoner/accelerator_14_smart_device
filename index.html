@@ -35,7 +35,7 @@
   <div class="wrapper">
 
     <!-- header -->
-    <header class="header header--base">
+    <header class="header">
       <div class="header__container container">
         <a class="header__logo logo" href="./index.html">
           <picture>
@@ -260,12 +260,12 @@
                   <div class="feedback-form__validation" data-validate-type="text" data-limitation="name"
                     data-required>
                     <label class="visually-hidden" for="name">Ваше имя:</label>
-                    <input type="text" name="name" id="name" spellcheck="false" placeholder="Имя" required
+                    <input type="text" name="name" id="name" spellcheck="false" autocomplete="off" placeholder="Имя" required
                       pattern="[A-Za-z]{1,50}" aria-invalid="true">
                   </div>
                   <div class="feedback-form__validation" data-validate-type="phone" data-required>
                     <label class="visually-hidden" for="phone">Ваш контактный телефон:</label>
-                    <input type="tel" name="phone" id="phone" placeholder="Телефон" required aria-invalid="true">
+                    <input type="tel" name="phone" id="phone" placeholder="Телефон" autocomplete="off" required aria-invalid="true">
                   </div>
                   <label class="visually-hidden" for="text">Ваш вопрос:</label>
                   <textarea name="text" id="text" placeholder="Ваш вопрос"></textarea>
@@ -331,40 +331,40 @@
           <section class="footer__column" data-accordion="element">
             <h2 class="footer__title title" data-accordion="button">Разделы сайта</h2>
             <nav class="footer__nav" data-accordion="content">
-              <ul class="footer__list footer-list">
-                <li class="footer-list__item">
-                  <a class="footer-list__link" href="#about">О Компании</a>
+              <ul class="footer__menu footer-menu">
+                <li class="footer-menu__item">
+                  <a class="footer__text" href="#about">О Компании</a>
                 </li>
-                <li class="footer-list__item">
-                  <a class="footer-list__link" href="#services">Продукты</a>
+                <li class="footer-menu__item">
+                  <a class="footer__text" href="#services">Продукты</a>
                 </li>
-                <li class="footer-list__item">
-                  <a class="footer-list__link" href="#!">Производство печатных плат</a>
+                <li class="footer-menu__item">
+                  <a class="footer__text" href="#!">Производство печатных плат</a>
                 </li>
-                <li class="footer-list__item">
-                  <a class="footer-list__link" href="#!">Монтаж печатных плат</a>
+                <li class="footer-menu__item">
+                  <a class="footer__text" href="#!">Монтаж печатных плат</a>
                 </li>
-                <li class="footer-list__item">
-                  <a class="footer-list__link" href="#!">Комплектующие</a>
+                <li class="footer-menu__item">
+                  <a class="footer__text" href="#!">Комплектующие</a>
                 </li>
-                <li class="footer-list__item">
-                  <a class="footer-list__link" href="#!">Доставка</a>
+                <li class="footer-menu__item">
+                  <a class="footer__text" href="#!">Доставка</a>
                 </li>
-                <li class="footer-list__item">
-                  <a class="footer-list__link" href="https://clck.ru/3vyXS" target="_blank">Контакты</a>
+                <li class="footer-menu__item">
+                  <a class="footer__text" href="https://clck.ru/3vyXS" target="_blank">Контакты</a>
                 </li>
               </ul>
             </nav>
           </section>
           <section class="footer__column" data-accordion="element">
             <h2 class="footer__title title" data-accordion="button">Наш офис</h2>
-            <address class="footer__address footer-list footer-list--add" data-accordion="content">
-              <p class="footer-list__item">
-                г. Мытищи, Олимпийский проспект, д.10
+            <address class="footer__address footer-contacts" data-accordion="content">
+              <p class="footer__text footer-contacts__item">
+                г.&nbsp;Мытищи, Олимпийский проспект, д.10
               </p>
-              <a class="footer-list__item footer-list__link" href="tel:+74955894050">+7 (495) 589-40-50</a>
-              <a class="footer-list__item footer-list__link" href="tel:+79253895829">+7 (925) 389-58-29</a>
-              <a class="footer-list__item footer-list__link" href="tel:+79253647813">+7 (925) 364-78-13</a>
+              <a class="footer__text footer-contacts__item" href="tel:+74955894050">+7 (495) 589-40-50</a>
+              <a class="footer__text footer-contacts__item" href="tel:+79253895829">+7 (925) 389-58-29</a>
+              <a class="footer__text footer-contacts__item" href="tel:+79253647813">+7 (925) 364-78-13</a>
             </address>
           </section>
         </div>
@@ -390,12 +390,12 @@
             <div class="feedback-form__input-wrapper feedback-form__input-wrapper--modal">
               <div class="feedback-form__validation" data-validate-type="text" data-limitation="name" data-required>
                 <label class="visually-hidden" for="name-modal">Ваше имя:</label>
-                <input type="text" name="name" id="name-modal" spellcheck="false" placeholder="Имя" required
+                <input type="text" name="name" id="name-modal" spellcheck="false" autocomplete="off" placeholder="Имя" required
                   pattern="[A-Za-z]{1,50}" aria-invalid="true" data-focus>
               </div>
               <div class="feedback-form__validation" data-validate-type="phone" data-required>
                 <label class="visually-hidden" for="phone-modal">Ваш контактный телефон:</label>
-                <input type="tel" name="phone" id="phone-modal" placeholder="Телефон" required aria-invalid="true">
+                <input type="tel" name="phone" id="phone-modal" placeholder="Телефон" autocomplete="off" required aria-invalid="true">
               </div>
               <label class="visually-hidden" for="text-modal">Ваш вопрос:</label>
               <textarea name="text" id="text-modal" placeholder="Ваш вопрос"></textarea>
